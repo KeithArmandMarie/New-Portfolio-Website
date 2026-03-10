@@ -6,7 +6,13 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+  }
+  
+  button, 
+  a, 
+  [role="button"] {
+    cursor: pointer;
   }
 }
 
