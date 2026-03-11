@@ -12,12 +12,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Keith Caballero | UI/UX Designer & Developer',
   description: 'Portfolio of Keith Caballero, a UI/UX Designer and WordPress Developer.',
+  icons: {
+    icon: 'https://cdn.peakcell.studio/assets/web/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased transition-colors duration-300">
+      <body className="font-sans antialiased transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <SmoothScroll>
             <div className="min-h-screen bg-white text-black dark:bg-[#050505] dark:text-white transition-colors duration-300">
