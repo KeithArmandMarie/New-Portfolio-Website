@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
-import { motion } from 'motion/react';
 
 import quizaImg from '../public/testimonials/quiza.png';
 import jirehImg from '../public/testimonials/jireh.png';

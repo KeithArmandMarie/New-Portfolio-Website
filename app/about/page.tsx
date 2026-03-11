@@ -6,8 +6,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
-import { Briefcase, GraduationCap, Code2, Sparkles } from 'lucide-react';
-import Link from 'next/link';
+import { Briefcase, GraduationCap, Code2 } from 'lucide-react';
 import Image from 'next/image';
 
 const experiences = [

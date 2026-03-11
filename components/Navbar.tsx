@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
 
@@ -12,7 +12,7 @@ export const Navbar = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect
+    setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navVariants: any = {
+  const navVariants: Variants = {
     hidden: { y: -100, opacity: 0 },
     visible: { 
       y: 0, 
@@ -37,7 +37,7 @@ export const Navbar = () => {
     }
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { y: -20, opacity: 0 },
     visible: { 
       y: 0, 

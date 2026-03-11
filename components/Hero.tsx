@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 
 export const Hero = () => {
-  const containerVariants: any = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -14,7 +14,7 @@ export const Hero = () => {
     },
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
