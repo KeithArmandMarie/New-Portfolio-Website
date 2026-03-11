@@ -224,6 +224,7 @@ export default function AboutPage() {
                   src="https://picsum.photos/seed/philosophy/800/800" 
                   alt="Design Philosophy" 
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
