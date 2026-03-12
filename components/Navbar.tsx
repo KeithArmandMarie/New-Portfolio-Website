@@ -48,7 +48,11 @@ export const Navbar = () => {
   };
 
   const toggleTheme = () => {
+    document.documentElement.classList.add('theme-transitioning');
     setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTimeout(() => {
+      document.documentElement.classList.remove('theme-transitioning');
+    }, 700);
   };
 
   return (
@@ -128,9 +132,11 @@ export const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <button className="bg-black dark:bg-white dark:text-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all shadow-lg shadow-black/10 hover:shadow-[#00FF00]/20">
-                Let&apos;s Talk
-              </button>
+              <Link href="mailto:caballerokeith2@gmail.com">
+                <button className="bg-black dark:bg-white dark:text-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all shadow-lg shadow-black/10 hover:shadow-[#00FF00]/20">
+                  Let&apos;s Talk
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion, Variants } from 'motion/react';
+import Link from 'next/link';
 
 export const Hero = () => {
   const containerVariants: Variants = {
@@ -139,9 +140,15 @@ export const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <button className="bg-gray-100 dark:bg-white/10 text-black dark:text-white px-8 py-4 rounded-md text-sm font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-all shadow-sm hover:shadow-md">
-            Download Resume
-          </button>
+          <Link 
+            href="https://drive.google.com/drive/u/2/folders/1vQ5c-UjkvYq4-cwUYfO7MPSHaDdirl8v" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button className="bg-gray-100 dark:bg-white/10 text-black dark:text-white px-8 py-4 rounded-md text-sm font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-all shadow-sm hover:shadow-md">
+              Download Resume
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

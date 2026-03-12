@@ -35,18 +35,18 @@ export const ContactCTA = () => {
             </motion.button>
           </Link>
         </div>
-        
-        <div className="select-none mt-12">
-          <motion.h2
-            initial={{ y: 80, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[18vw] md:text-[22vw] font-black leading-none tracking-[-0.08em] dark:text-white/5 text-black/5 whitespace-nowrap"
-          >
-            KEITH
-          </motion.h2>
-        </div>
+      </div>
+
+      <div className="w-full select-none mt-12 relative flex justify-center items-center overflow-hidden py-10">
+        <motion.h2
+          initial={{ y: "100%", opacity: 0, skewY: 5 }}
+          whileInView={{ y: 0, opacity: 1, skewY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-[22vw] font-black leading-none tracking-tighter dark:text-white/[0.12] text-black/[0.12] whitespace-nowrap uppercase select-none"
+        >
+          KEITH
+        </motion.h2>
       </div>
     </section>
   );
