@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server';
 
 const client_id = process.env.SPOTIFY_CLIENT_ID;
-const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
-const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET || process.env.SPOTIFY_CLIENT_SEC;
+const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN || process.env.SPOTIFY_REFRESH_TO;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
+const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=1`;
 
 const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {
@@ -55,18 +56,35 @@ export async function GET() {
     },
   });
 
-  if (response.status === 204) {
-    return NextResponse.json({ isPlaying: false, message: "Nothing currently playing" });
-  }
+  if (response.status === 204 || response.status > 400) {
+    // Fallback to recently played
+    const recentResponse = await fetch(RECENTLY_PLAYED_ENDPOINT, {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    });
 
-  if (response.status > 400) {
-    const errorData = await response.json();
-    console.error('Spotify API Error:', errorData);
-    return NextResponse.json({ 
-      isPlaying: false, 
-      message: "Spotify API error",
-      error: errorData
-    }, { status: response.status });
+    if (!recentResponse.ok) {
+      return NextResponse.json({ isPlaying: false, message: "Nothing currently playing" });
+    }
+
+    const recentData = await recentResponse.json();
+    const lastSong = recentData.items[0]?.track;
+
+    if (!lastSong) {
+      return NextResponse.json({ isPlaying: false, message: "Nothing currently playing" });
+    }
+
+    return NextResponse.json({
+      album: lastSong.album.name,
+      albumArt: lastSong.album.images[0].url,
+      artist: lastSong.artists.map((_artist: { name: string }) => _artist.name).join(', '),
+      isPlaying: false,
+      songUrl: lastSong.external_urls.spotify,
+      title: lastSong.name,
+      progress: 0,
+      duration: lastSong.duration_ms
+    });
   }
 
   const song = await response.json();
