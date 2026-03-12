@@ -238,7 +238,7 @@ export const BentoProfile = () => {
                 <div className="bg-black/60 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-2xl">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#00FF00] mb-1">Current Base</p>
                   <h3 className="text-xl font-bold leading-tight">Davao City, PH</h3>
-                  <p className="text-[10px] text-white/60 mt-1 font-medium">8.0767° N, 125.6115° E</p>
+                  <p className="text-[10px] text-white/60 mt-1 font-medium">7.06° N, 125.61° E</p>
                 </div>
               </div>
             </div>
