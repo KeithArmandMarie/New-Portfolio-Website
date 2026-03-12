@@ -106,7 +106,6 @@ export const BentoProfile = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
           
-          {/* Spotify Card */}
 {/* Spotify Card */}
 <motion.div 
   whileHover={{ y: -5 }}
@@ -230,7 +229,7 @@ export const BentoProfile = () => {
             
             <div className="w-full h-full relative">
               <iframe 
-                src="https://duckduckgo.com/assets/maps/map.html?q=Davao+City+Philippines&t=h&z=12"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=125.5115%2C7.9767%2C125.7115%2C8.1767&layer=mapnik&marker=8.0767%2C125.6115"
                 className="w-full h-full border-none grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
                 title="Apple Maps Location"
               />
