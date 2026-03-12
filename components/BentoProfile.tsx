@@ -107,96 +107,82 @@ export const BentoProfile = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
           
           {/* Spotify Card */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="md:col-span-2 md:row-span-1 bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group"
-          >
-            <div className="flex justify-between items-start relative z-10">
-              <div className="flex items-center gap-2 px-3 py-1 bg-[#1DB954]/10 rounded-full">
-                <Music className={`w-4 h-4 text-[#1DB954] ${nowPlaying.isPlaying ? 'animate-bounce' : ''}`} />
-                <span className="text-[10px] font-bold text-[#1DB954] uppercase tracking-wider">
-                  {nowPlaying.isPlaying ? 'Currently Listening' : 'Last Played'}
-                </span>
-              </div>
-              {nowPlaying.songUrl && (
-                <a href={nowPlaying.songUrl} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 text-gray-400 hover:text-[#1DB954] transition-colors" />
-                </a>
-              )}
-            </div>
+<motion.div 
+  whileHover={{ y: -5 }}
+  className="md:col-span-2 md:row-span-1 bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group"
+>
+  <div className="flex justify-between items-start relative z-10">
+    <div className="flex items-center gap-2 px-3 py-1 bg-[#1DB954]/10 rounded-full">
+      <Music className={`w-4 h-4 text-[#1DB954] ${nowPlaying.isPlaying ? 'animate-bounce' : ''}`} />
+      <span className="text-[10px] font-bold text-[#1DB954] uppercase tracking-wider">
+        {nowPlaying.isPlaying ? 'Currently Listening' : 'Last Played'}
+      </span>
+    </div>
+    {nowPlaying.songUrl && (
+      <a href={nowPlaying.songUrl} target="_blank" rel="noopener noreferrer">
+        <ExternalLink className="w-4 h-4 text-gray-400 hover:text-[#1DB954] transition-colors" />
+      </a>
+    )}
+  </div>
 
-            <div className="flex items-center gap-6 relative z-10">
-              <div className="relative w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-500">
-                <Image 
-                  src={nowPlaying.albumArt} 
-                  alt="Album Art" 
-                  fill 
-                  sizes="(max-width: 768px) 96px, 96px"
-                  className="object-cover"
-                  referrerPolicy="no-referrer"
-                />
-                {nowPlaying.isPlaying && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                    <div className="flex gap-1">
-                      {[1, 2, 3].map(i => (
-                        <motion.div 
-                          key={i}
-                          animate={{ height: [8, 16, 8] }}
-                          transition={{ duration: 0.5, repeat: Infinity, delay: i * 0.1 }}
-                          className="w-1 bg-white rounded-full"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div>
-                <h3 className="text-xl font-bold dark:text-white leading-tight truncate max-w-[200px]">{nowPlaying.title}</h3>
-                <p className="text-gray-500 dark:text-gray-400 truncate max-w-[200px]">{nowPlaying.artist}</p>
-              </div>
-            </div>
+  {/* Spotify Embed Player */}
+  {nowPlaying.trackId ? (
+    <div className="relative z-10 rounded-xl overflow-hidden">
+      <iframe
+        key={nowPlaying.trackId}
+        src={`https://open.spotify.com/embed/track/${nowPlaying.trackId}?utm_source=generator&theme=0`}
+        width="100%"
+        height="80"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        className="rounded-xl"
+      />
+    </div>
+  ) : (
+    <div className="flex items-center gap-4 relative z-10">
+      <div className="relative w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden shadow-xl">
+        <Image 
+          src={nowPlaying.albumArt} 
+          alt="Album Art" 
+          fill 
+          sizes="64px"
+          className="object-cover"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+      <div>
+        <h3 className="text-lg font-bold dark:text-white leading-tight truncate max-w-[200px]">{nowPlaying.title}</h3>
+        <p className="text-gray-500 dark:text-gray-400 truncate max-w-[200px]">{nowPlaying.artist}</p>
+      </div>
+    </div>
+  )}
 
-            {/* Spotify Embed Player */}
-            {nowPlaying.trackId && (
-              <div className="relative z-10 rounded-xl overflow-hidden">
-                <iframe
-                  key={nowPlaying.trackId}
-                  src={`https://open.spotify.com/embed/track/${nowPlaying.trackId}?utm_source=generator&theme=0`}
-                  width="100%"
-                  height="80"
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  className="rounded-xl"
-                />
-              </div>
-            )}
-
-            <div className="space-y-2 relative z-10">
-              <div className="h-1 w-full bg-gray-100 dark:bg-white/10 rounded-full overflow-hidden">
-                <motion.div 
-                  className="h-full bg-[#1DB954]" 
-                  initial={{ width: 0 }}
-                  animate={{ width: `${(nowPlaying.progress / nowPlaying.duration) * 100}%` }}
-                />
-              </div>
-              <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-                <span>Spotify</span>
-                <div className="flex items-center gap-1.5">
-                  {nowPlaying.isPlaying && (
-                    <motion.span 
-                      animate={{ opacity: [0.4, 1, 0.4] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-1.5 h-1.5 bg-[#1DB954] rounded-full shadow-[0_0_8px_rgba(29,185,84,0.6)]"
-                    />
-                  )}
-                  <span>{nowPlaying.isPlaying ? 'Live' : 'Offline'}</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1DB954]/10 blur-[60px] rounded-full group-hover:bg-[#1DB954]/20 transition-colors" />
-          </motion.div>
+  <div className="space-y-2 relative z-10">
+    <div className="h-1 w-full bg-gray-100 dark:bg-white/10 rounded-full overflow-hidden">
+      <motion.div 
+        className="h-full bg-[#1DB954]" 
+        initial={{ width: 0 }}
+        animate={{ width: `${(nowPlaying.progress / nowPlaying.duration) * 100}%` }}
+      />
+    </div>
+    <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+      <span>Spotify</span>
+      <div className="flex items-center gap-1.5">
+        {nowPlaying.isPlaying && (
+          <motion.span 
+            animate={{ opacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1.5 h-1.5 bg-[#1DB954] rounded-full shadow-[0_0_8px_rgba(29,185,84,0.6)]"
+          />
+        )}
+        <span>{nowPlaying.isPlaying ? 'Live' : 'Offline'}</span>
+      </div>
+    </div>
+  </div>
+  
+  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1DB954]/10 blur-[60px] rounded-full group-hover:bg-[#1DB954]/20 transition-colors" />
+</motion.div>
 
           {/* Birthday Card */}
           <motion.div 
