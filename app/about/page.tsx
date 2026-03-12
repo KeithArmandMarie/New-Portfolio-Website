@@ -8,6 +8,7 @@ import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
 import { Briefcase, GraduationCap, Code2 } from 'lucide-react';
 import Image from 'next/image';
+import { BentoProfile } from '@/components/BentoProfile';
 
 const experiences = [
   {
@@ -220,7 +221,7 @@ export default function AboutPage() {
                 className="relative aspect-square rounded-3xl overflow-hidden"
               >
                 <Image 
-                  src="https://picsum.photos/seed/philosophy/800/800" 
+                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop" 
                   alt="Design Philosophy" 
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -248,6 +249,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <BentoProfile />
 
       <ContactCTA />
       <Footer />

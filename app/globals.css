@@ -10,11 +10,11 @@
   }
   
   body {
-    @apply transition-[background-color,color,filter,transform] duration-700 ease-in-out;
+    @apply transition-[background-color,color] duration-500 ease-in-out;
   }
   
-  .theme-transitioning body {
-    @apply blur-[2px] scale-[0.99];
+  .theme-transitioning {
+    cursor: wait;
   }
   
   button, 

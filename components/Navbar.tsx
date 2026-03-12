@@ -52,7 +52,7 @@ export const Navbar = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     setTimeout(() => {
       document.documentElement.classList.remove('theme-transitioning');
-    }, 700);
+    }, 300);
   };
 
   return (
@@ -115,10 +115,10 @@ export const Navbar = () => {
                 {mounted && (
                   <motion.div
                     key={theme}
-                    initial={{ y: 20, opacity: 0, rotate: -90 }}
-                    animate={{ y: 0, opacity: 1, rotate: 0 }}
-                    exit={{ y: -20, opacity: 0, rotate: 90 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    initial={{ y: 30, opacity: 0, rotate: -180, scale: 0.5 }}
+                    animate={{ y: 0, opacity: 1, rotate: 0, scale: 1 }}
+                    exit={{ y: -30, opacity: 0, rotate: 180, scale: 0.5 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
                     {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                   </motion.div>
