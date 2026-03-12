@@ -107,6 +107,7 @@ export const BentoProfile = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
           
           {/* Spotify Card */}
+{/* Spotify Card */}
 <motion.div 
   whileHover={{ y: -5 }}
   className="md:col-span-2 md:row-span-1 bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group"
@@ -125,38 +126,36 @@ export const BentoProfile = () => {
     )}
   </div>
 
-  {/* Spotify Embed Player */}
-  {nowPlaying.trackId ? (
-    <div className="relative z-10 rounded-xl overflow-hidden">
-      <iframe
-        key={nowPlaying.trackId}
-        src={`https://open.spotify.com/embed/track/${nowPlaying.trackId}?utm_source=generator&theme=0`}
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        className="rounded-xl"
+  <div className="flex items-center gap-6 relative z-10">
+    <div className="relative w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-500">
+      <Image 
+        src={nowPlaying.albumArt} 
+        alt="Album Art" 
+        fill 
+        sizes="(max-width: 768px) 96px, 96px"
+        className="object-cover"
+        referrerPolicy="no-referrer"
       />
+      {nowPlaying.isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+          <div className="flex gap-1">
+            {[1, 2, 3].map(i => (
+              <motion.div 
+                key={i}
+                animate={{ height: [8, 16, 8] }}
+                transition={{ duration: 0.5, repeat: Infinity, delay: i * 0.1 }}
+                className="w-1 bg-white rounded-full"
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
-  ) : (
-    <div className="flex items-center gap-4 relative z-10">
-      <div className="relative w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden shadow-xl">
-        <Image 
-          src={nowPlaying.albumArt} 
-          alt="Album Art" 
-          fill 
-          sizes="64px"
-          className="object-cover"
-          referrerPolicy="no-referrer"
-        />
-      </div>
-      <div>
-        <h3 className="text-lg font-bold dark:text-white leading-tight truncate max-w-[200px]">{nowPlaying.title}</h3>
-        <p className="text-gray-500 dark:text-gray-400 truncate max-w-[200px]">{nowPlaying.artist}</p>
-      </div>
+    <div>
+      <h3 className="text-xl font-bold dark:text-white leading-tight truncate max-w-[200px]">{nowPlaying.title}</h3>
+      <p className="text-gray-500 dark:text-gray-400 truncate max-w-[200px]">{nowPlaying.artist}</p>
     </div>
-  )}
+  </div>
 
   <div className="space-y-2 relative z-10">
     <div className="h-1 w-full bg-gray-100 dark:bg-white/10 rounded-full overflow-hidden">
