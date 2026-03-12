@@ -51,17 +51,12 @@ export async function GET() {
   }
 
   const response = await fetch(NOW_PLAYING_ENDPOINT, {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
+    headers: { Authorization: `Bearer ${access_token}` },
   });
 
   if (response.status === 204 || response.status > 400) {
-    // Fallback to recently played
     const recentResponse = await fetch(RECENTLY_PLAYED_ENDPOINT, {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+      headers: { Authorization: `Bearer ${access_token}` },
     });
 
     if (!recentResponse.ok) {
@@ -83,7 +78,9 @@ export async function GET() {
       songUrl: lastSong.external_urls.spotify,
       title: lastSong.name,
       progress: 0,
-      duration: lastSong.duration_ms
+      duration: lastSong.duration_ms,
+      trackId: lastSong.id,            // ✅ NEW
+      previewUrl: lastSong.preview_url  // ✅ NEW
     });
   }
 
@@ -93,23 +90,16 @@ export async function GET() {
     return NextResponse.json({ isPlaying: false });
   }
 
-  const isPlaying = song.is_playing;
-  const title = song.item.name;
-  const artist = song.item.artists.map((_artist: { name: string }) => _artist.name).join(', ');
-  const album = song.item.album.name;
-  const albumArt = song.item.album.images[0].url;
-  const songUrl = song.item.external_urls.spotify;
-  const progress = song.progress_ms;
-  const duration = song.item.duration_ms;
-
   return NextResponse.json({
-    album,
-    albumArt,
-    artist,
-    isPlaying,
-    songUrl,
-    title,
-    progress,
-    duration
+    album: song.item.album.name,
+    albumArt: song.item.album.images[0].url,
+    artist: song.item.artists.map((_artist: { name: string }) => _artist.name).join(', '),
+    isPlaying: song.is_playing,
+    songUrl: song.item.external_urls.spotify,
+    title: song.item.name,
+    progress: song.progress_ms,
+    duration: song.item.duration_ms,
+    trackId: song.item.id,            // ✅ NEW
+    previewUrl: song.item.preview_url  // ✅ NEW
   });
 }
