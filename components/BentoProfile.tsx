@@ -15,6 +15,8 @@ export const BentoProfile = () => {
     progress: number;
     duration: number;
     songUrl?: string;
+    trackId?: string;
+    previewUrl?: string;
   }>({
     title: "Not Playing",
     artist: "Spotify",
@@ -24,11 +26,9 @@ export const BentoProfile = () => {
     duration: 100
   });
 
-  // Birthday State
   const birthdate = '2001-03-09';
   const [ageInfo, setAgeInfo] = useState({ age: 0, daysLeft: 0 });
 
-  // Spotify Fetching
   useEffect(() => {
     const fetchNowPlaying = async () => {
       try {
@@ -46,7 +46,7 @@ export const BentoProfile = () => {
           return;
         }
 
-        if (data.isPlaying) {
+        if (data.title) {
           setNowPlaying(data);
         } else {
           setNowPlaying({
@@ -64,11 +64,10 @@ export const BentoProfile = () => {
     };
 
     fetchNowPlaying();
-    const interval = setInterval(fetchNowPlaying, 10000); // Poll every 10s
+    const interval = setInterval(fetchNowPlaying, 10000);
     return () => clearInterval(interval);
   }, []);
 
-  // Birthday Calculation
   useEffect(() => {
     setMounted(true);
     const calculateAge = () => {
@@ -80,7 +79,6 @@ export const BentoProfile = () => {
         age--;
       }
 
-      // Next birthday
       const nextBirthday = new Date(today.getFullYear(), bday.getMonth(), bday.getDate());
       if (today > nextBirthday) {
         nextBirthday.setFullYear(today.getFullYear() + 1);
@@ -107,6 +105,7 @@ export const BentoProfile = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+          
           {/* Spotify Card */}
           <motion.div 
             whileHover={{ y: -5 }}
@@ -156,6 +155,22 @@ export const BentoProfile = () => {
                 <p className="text-gray-500 dark:text-gray-400 truncate max-w-[200px]">{nowPlaying.artist}</p>
               </div>
             </div>
+
+            {/* Spotify Embed Player */}
+            {nowPlaying.trackId && (
+              <div className="relative z-10 rounded-xl overflow-hidden">
+                <iframe
+                  key={nowPlaying.trackId}
+                  src={`https://open.spotify.com/embed/track/${nowPlaying.trackId}?utm_source=generator&theme=0`}
+                  width="100%"
+                  height="80"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="rounded-xl"
+                />
+              </div>
+            )}
 
             <div className="space-y-2 relative z-10">
               <div className="h-1 w-full bg-gray-100 dark:bg-white/10 rounded-full overflow-hidden">
@@ -229,7 +244,6 @@ export const BentoProfile = () => {
             </a>
             
             <div className="w-full h-full relative">
-              {/* Interactive Apple Maps Embed via DuckDuckGo */}
               <iframe 
                 src="https://duckduckgo.com/assets/maps/map.html?q=Davao+City+Philippines&t=h&z=12"
                 className="w-full h-full border-none grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
@@ -281,6 +295,7 @@ export const BentoProfile = () => {
             <div className="text-5xl font-black dark:text-white tracking-tighter mb-2 group-hover:text-[#00FF00] transition-colors">100%</div>
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Commitment</p>
           </motion.div>
+
         </div>
       </div>
     </section>
