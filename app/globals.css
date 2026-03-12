@@ -9,6 +9,10 @@
     scroll-behavior: auto;
   }
   
+  body {
+    @apply transition-colors duration-500;
+  }
+  
   button, 
   a, 
   [role="button"] {

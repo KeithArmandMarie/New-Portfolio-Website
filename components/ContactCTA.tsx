@@ -36,13 +36,13 @@ export const ContactCTA = () => {
           </Link>
         </div>
         
-        <div className="overflow-hidden select-none">
+        <div className="select-none mt-12">
           <motion.h2
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 80, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-[15vw] md:text-[20vw] font-black leading-none tracking-tighter dark:text-white/5"
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="text-[18vw] md:text-[22vw] font-black leading-none tracking-[-0.08em] dark:text-white/5 text-black/5 whitespace-nowrap"
           >
             KEITH
           </motion.h2>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, Variants } from 'motion/react';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
+import { AnimatePresence } from 'motion/react';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,11 +48,7 @@ export const Navbar = () => {
   };
 
   const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light');
-    } else {
-      setTheme('dark');
-    }
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (
@@ -107,10 +104,22 @@ export const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
+              className="relative p-2 rounded-full bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors overflow-hidden h-10 w-10 flex items-center justify-center"
               aria-label="Toggle theme"
             >
-              {mounted && (theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />)}
+              <AnimatePresence mode="wait" initial={false}>
+                {mounted && (
+                  <motion.div
+                    key={theme}
+                    initial={{ y: 20, opacity: 0, rotate: -90 }}
+                    animate={{ y: 0, opacity: 1, rotate: 0 }}
+                    exit={{ y: -20, opacity: 0, rotate: 90 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                  </motion.div>
+                )}
+              </AnimatePresence>
               {!mounted && <div className="w-5 h-5" />}
             </motion.button>
 
