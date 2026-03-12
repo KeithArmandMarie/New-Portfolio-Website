@@ -9,31 +9,26 @@ const testimonials = [
     text: "Keith has been a vital asset to our team, skillfully combining technical expertise with creative design to enhance our digital presence. His thoughtful strategies and consistent attention to detail set him apart.",
     author: "Quiza B.",
     role: "UI/UX Designer",
-    image: "/testimonials/quiza.png",
   },
   {
     text: "Keith took on the challenge of building the website and prototypes. He displayed a high level of professionalism despite jumping from one design software to another and ultimately helped the website development.",
     author: "Jireh R.",
     role: "UI/UX Designer",
-    image: "/testimonials/jireh.png",
   },
   {
     text: "In a workplace where dedication sets the standard, Keith shines brightly. His tireless work ethic and unwavering commitment elevate our team. Thank you, Keith, for your invaluable contributions and inspiring dedication.",
     author: "Kyle R.",
     role: "Team Leader",
-    image: "/testimonials/kyle.png",
   },
   {
     text: "Keith's strategic approach at ELEV8 Consulting transformed our digital presence. His ability to understand our brand's vision and translate it into a high-performing platform was exceptional.",
     author: "Susie I.",
     role: "Client, ELEV8 Consulting",
-    image: "/testimonials/susie.png",
   },
   {
     text: "Working with Keith was a seamless experience. He delivered a sophisticated solution for ELEV8 Consulting that exceeded our expectations in both design and functionality.",
     author: "Blaire S.",
     role: "Client, ELEV8 Consulting",
-    image: "/testimonials/blaire.png",
   },
 ];
 
@@ -76,15 +71,6 @@ export const Testimonials = () => {
                   &quot;{testimonial.text}&quot;
                 </p>
                 <div className="flex items-center">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      fill
-                      sizes="48px"
-                      className="object-cover"
-                    />
-                  </div>
                   <div>
                     <h4 className="font-medium tracking-[-0.06em] text-sm dark:text-white">{testimonial.author}</h4>
                     <p className="text-gray-500 text-xs dark:text-gray-400">{testimonial.role}</p>
