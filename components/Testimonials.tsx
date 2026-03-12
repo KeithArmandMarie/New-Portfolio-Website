@@ -4,42 +4,36 @@ import React from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 
-import quizaImg from '../public/testimonials/quiza.png';
-import jirehImg from '../public/testimonials/jireh.png';
-import kyleImg from '../public/testimonials/kyle.png';
-import susieImg from '../public/testimonials/susie.png';
-import blaireImg from '../public/testimonials/blaire.png';
-
 const testimonials = [
   {
     text: "Keith has been a vital asset to our team, skillfully combining technical expertise with creative design to enhance our digital presence. His thoughtful strategies and consistent attention to detail set him apart.",
     author: "Quiza B.",
     role: "UI/UX Designer",
-    image: quizaImg,
+    image: "/testimonials/quiza.png",
   },
   {
     text: "Keith took on the challenge of building the website and prototypes. He displayed a high level of professionalism despite jumping from one design software to another and ultimately helped the website development.",
     author: "Jireh R.",
     role: "UI/UX Designer",
-    image: jirehImg,
+    image: "/testimonials/jireh.png",
   },
   {
     text: "In a workplace where dedication sets the standard, Keith shines brightly. His tireless work ethic and unwavering commitment elevate our team. Thank you, Keith, for your invaluable contributions and inspiring dedication.",
     author: "Kyle R.",
     role: "Team Leader",
-    image: kyleImg,
+    image: "/testimonials/kyle.png",
   },
   {
     text: "Keith's strategic approach at ELEV8 Consulting transformed our digital presence. His ability to understand our brand's vision and translate it into a high-performing platform was exceptional.",
     author: "Susie I.",
     role: "Client, ELEV8 Consulting",
-    image: susieImg,
+    image: "/testimonials/susie.png",
   },
   {
     text: "Working with Keith was a seamless experience. He delivered a sophisticated solution for ELEV8 Consulting that exceeded our expectations in both design and functionality.",
     author: "Blaire S.",
     role: "Client, ELEV8 Consulting",
-    image: blaireImg,
+    image: "/testimonials/blaire.png",
   },
 ];
 
