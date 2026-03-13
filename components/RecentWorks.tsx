@@ -28,6 +28,55 @@ const projects = [
     tags: ['FinTech', 'Web Development', 'Performance'],
     link: 'https://www.gogorilla.com/',
   },
+  {
+    title: 'AI Headshot Pro',
+    description: 'An AI-powered platform that generates professional-grade headshots from casual photos, streamlining the process for professionals and teams.',
+    image: 'public/AIHEADSHOT.png',
+    tags: ['AI', 'SaaS', 'Web App'],
+    link: 'https://ai-headshot-pro-sooty.vercel.app/',
+  },
+  {
+    title: 'Professional Plumber',
+    description: 'A high-converting service website for plumbing businesses, featuring online booking, service listings, and a mobile-first design.',
+    image: 'public/PLUMBING.png',
+    tags: ['Service Industry', 'Web Design', 'SEO'],
+    link: 'https://plumber-website-black.vercel.app/',
+  },
+  {
+    title: 'Portfolio v2',
+    description: 'An elegant, interactive portfolio website built with Framer, featuring smooth animations and a personalized guest experience.',
+    image: 'public/PORTFOLIO.png',
+    tags: ['Event Design', 'Framer', 'Interactive'],
+    link: 'https://keitharmandmarie.framer.website/',
+  },
+  {
+    title: 'Nexux Platform',
+    description: 'A modern tech platform landing page designed for scalability and user engagement, showcasing innovative software solutions.',
+    image: 'public/NEXUS.png',
+    tags: ['Tech', 'SaaS', 'Landing Page'],
+    link: 'https://nexux-chi.vercel.app/',
+  },
+  {
+    title: 'Caniry Digital Agency',
+    description: 'A vibrant, creative agency website that highlights digital marketing services and portfolio work with a focus on conversion.',
+    image: 'public/CANIRY.png',
+    tags: ['Agency', 'Marketing', 'Creative'],
+    link: 'https://canirydigitalagency.vercel.app/',
+  },
+  {
+    title: 'GalacticGlaze',
+    description: 'A space-themed website concept design, focusing on a unique brand identity and a playful user interface.',
+    image: 'public/GALACTICGLAZE.png',
+    tags: ['UI/UX Design', 'Branding', 'Figma'],
+    link: 'https://www.figma.com/proto/k7cz8X4GoKnvEIpjhevpQ6/GalacticGlaze?page-id=0%3A1&node-id=8-8&viewport=-227%2C-275%2C0.4&t=Svg6eMxCZYeVXNDp-1&scaling=min-zoom&starting-point-node-id=8%3A8&hide-ui=1',
+  },
+  {
+    title: 'Inferior Fashion',
+    description: 'A minimalist fashion brand prototype that explores high-end e-commerce interactions and a clean, editorial-style layout.',
+    image: 'public/INFERIOR.png',
+    tags: ['E-commerce', 'Minimalism', 'Figma'],
+    link: 'https://www.figma.com/proto/dAq7SW0mpFU7TD457txNog/Inferior?page-id=0%3A1&node-id=6-25&viewport=-2161%2C-4141%2C0.85&t=c3bRkiSlUhXrLCGC-1&scaling=min-zoom&hide-ui=1',
+  },
 ];
 
 export const RecentWorks = () => {
@@ -96,18 +145,6 @@ export const RecentWorks = () => {
               </div>
             </motion.div>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <Link href="/work">
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border border-black dark:border-white rounded-md text-sm font-semibold hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all shadow-sm hover:shadow-md dark:text-white"
-            >
-              View more
-            </motion.button>
-          </Link>
         </div>
       </div>
     </section>
