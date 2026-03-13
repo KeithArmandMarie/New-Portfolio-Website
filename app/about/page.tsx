@@ -17,6 +17,11 @@ const experiences = [
     role: 'During my time with ELEV8 Consulting, I developed two company websites from scratch, managing copywriting, wireframing, development, and SEO. In addition, I designed graphics for the company’s social media and supported basic administrative tasks like invoicing.',
   },
   {
+    company: 'GOGORILLA',
+    position: 'UI/UX DESIGNER & WEB DEVELOPER',
+    role: 'At Frontpage Digital (now GoGorilla), I started by creating user-centered low-fidelity wireframes for the Portify project using Balsamiq. Later, I joined the high-fidelity design team, contributing to the prototyping and development of the GoGorilla website. Using Figma and Framer, we designed seamless animations and prototypes, successfully launching a user-friendly site with precision and efficiency.',
+  },
+  {
     company: 'FUNCTIONEIGHT',
     position: 'UI/UX DESIGNER & WEB DEVELOPER',
     role: 'During my time at FunctionEight as a Frontend Developer and UI/UX Designer, my responsibilities included crafting website designs and bringing them to life using the Avada page builder in WordPress.',
