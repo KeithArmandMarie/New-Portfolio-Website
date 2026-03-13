@@ -186,7 +186,7 @@ export const BentoProfile = () => {
                 />
               </div>
               <div className="flex justify-between items-center text-[10px] font-black text-zinc-400 uppercase tracking-[0.3em]">
-                <span>Spotify High Fidelity</span>
+                <span>Now Listening</span>
                 <div className="flex gap-1">
                   {[1, 2, 3, 4].map(i => (
                     <motion.div 
