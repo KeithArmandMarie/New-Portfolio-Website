@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { SmoothScroll } from '@/components/SmoothScroll';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </SmoothScroll>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-BWKR8QJ000" />
       </body>
     </html>
   );

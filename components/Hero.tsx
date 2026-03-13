@@ -145,7 +145,7 @@ export const Hero = () => {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <button className="bg-gray-100 dark:bg-white/10 text-black dark:text-white px-8 py-4 rounded-md text-sm font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-all shadow-sm hover:shadow-md">
+            <button className="bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm">
               Download Resume
             </button>
           </Link>

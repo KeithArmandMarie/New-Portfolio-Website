@@ -214,42 +214,66 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none"></div>
+      <section className="relative py-32 bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid-subtle opacity-10 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-transparent to-black pointer-events-none"></div>
+        
         <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
+          <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="md:w-1/2">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative aspect-square rounded-3xl overflow-hidden"
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="relative aspect-[4/5] md:aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-[#00FF00]/10"
               >
                 <Image 
                   src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop" 
                   alt="Design Philosophy" 
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-[#00FF00]/10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               </motion.div>
             </div>
+            
             <div className="md:w-1/2">
-              <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00]/10 text-[#00FF00] text-xs font-bold mb-6">
-                Philosophy
-              </div>
-              <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-8 dark:text-white leading-none">
-                Design that speaks, <br />
-                <span className="text-[#00FF00]">Code that works.</span>
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                I believe that great design is invisible. It should guide the user effortlessly towards their goal without them even noticing the interface.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                My approach combines analytical thinking with creative intuition. I don&apos;t just build websites; I build digital tools that solve real business problems and create lasting impressions.
-              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00]/20 text-[#00FF00] text-xs font-bold mb-8 border border-[#00FF00]/30">
+                  Philosophy
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-[-0.06em] mb-10 leading-[1.1] md:leading-[1]">
+                  <span className="block whitespace-nowrap">Design that speaks,</span>
+                  <span className="block whitespace-nowrap text-[#00FF00]">Code that works.</span>
+                </h2>
+                <div className="space-y-6 max-w-lg">
+                  <p className="text-gray-400 text-lg leading-relaxed tracking-tight">
+                    I build invisible designs that guide users effortlessly, combining analytical thinking with creative intuition to solve real business problems.
+                  </p>
+                </div>
+                
+                <div className="mt-12 flex items-center gap-6">
+                  <div className="flex -space-x-4">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-12 h-12 rounded-full border-2 border-black bg-zinc-800 flex items-center justify-center text-[10px] font-bold">
+                        {i === 1 ? 'UI' : i === 2 ? 'UX' : 'DEV'}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="h-8 w-[1px] bg-white/10"></div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">
+                    Holistic <br /> Approach
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>

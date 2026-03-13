@@ -330,7 +330,7 @@ export const BentoProfile = () => {
               
               <a 
                 href="mailto:caballerokeith2@gmail.com"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-[10px] font-black uppercase tracking-[0.3em] rounded-[2rem] hover:bg-[#00FF00] dark:hover:bg-[#00FF00] hover:text-black transition-all duration-500 group/btn shadow-2xl"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm font-medium rounded-xl hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all duration-500 group/btn shadow-sm"
               >
                 <span>Initiate</span>
                 <motion.span

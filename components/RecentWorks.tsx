@@ -31,35 +31,35 @@ const projects = [
   {
     title: 'AI Headshot Pro',
     description: 'An AI-powered platform that generates professional-grade headshots from casual photos, streamlining the process for professionals and teams.',
-    image: '/AIHEADSHOT.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fai-headshot-pro-sooty.vercel.app%2F?w=800&h=600',
     tags: ['AI', 'SaaS', 'Web App'],
     link: 'https://ai-headshot-pro-sooty.vercel.app/',
   },
   {
     title: 'Professional Plumber',
     description: 'A high-converting service website for plumbing businesses, featuring online booking, service listings, and a mobile-first design.',
-    image: '/PLUMBING.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fplumber-website-black.vercel.app%2F?w=800&h=600',
     tags: ['Service Industry', 'Web Design', 'SEO'],
     link: 'https://plumber-website-black.vercel.app/',
   },
   {
     title: 'Portfolio v2',
     description: 'An elegant, interactive portfolio website built with Framer, featuring smooth animations and a personalized guest experience.',
-    image: '/PORTFOLIO.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fkeitharmandmarie.framer.website%2F?w=800&h=600',
     tags: ['Event Design', 'Framer', 'Interactive'],
     link: 'https://keitharmandmarie.framer.website/',
   },
   {
     title: 'Nexux Platform',
     description: 'A modern tech platform landing page designed for scalability and user engagement, showcasing innovative software solutions.',
-    image: '/NEXUS.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnexux-chi.vercel.app%2F?w=800&h=600',
     tags: ['Tech', 'SaaS', 'Landing Page'],
     link: 'https://nexux-chi.vercel.app/',
   },
   {
     title: 'Caniry Digital Agency',
     description: 'A vibrant, creative agency website that highlights digital marketing services and portfolio work with a focus on conversion.',
-    image: '/CANIRY.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcanirydigitalagency.vercel.app%2F?w=800&h=600',
     tags: ['Agency', 'Marketing', 'Creative'],
     link: 'https://canirydigitalagency.vercel.app/',
   },
@@ -79,7 +79,13 @@ const projects = [
   },
 ];
 
-export const RecentWorks = () => {
+interface RecentWorksProps {
+  limit?: number;
+}
+
+export const RecentWorks = ({ limit }: RecentWorksProps) => {
+  const displayedProjects = limit ? projects.slice(0, limit) : projects;
+
   return (
     <section id="work" className="relative py-24 bg-gray-50 dark:bg-[#0a0a0a] transition-colors duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-grid-subtle opacity-50 pointer-events-none"></div>
@@ -95,7 +101,7 @@ export const RecentWorks = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -146,6 +152,20 @@ export const RecentWorks = () => {
             </motion.div>
           ))}
         </div>
+
+        {limit && projects.length > limit && (
+          <div className="mt-16 text-center">
+            <Link href="/work">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm"
+              >
+                View more Works
+              </motion.button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

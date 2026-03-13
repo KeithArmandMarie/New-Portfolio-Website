@@ -18,18 +18,18 @@ export const ContactCTA = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-24">
           <Link href="mailto:caballerokeith2@gmail.com">
             <motion.button 
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0,255,0,0.2)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#00FF00] text-black px-8 py-4 rounded-md text-sm font-bold hover:bg-[#00DD00] transition-all w-full sm:w-auto"
+              className="bg-[#00FF00] text-black px-10 py-4 rounded-xl text-sm font-medium hover:bg-[#00DD00] transition-all w-full sm:w-auto shadow-lg shadow-[#00FF00]/20"
             >
               Contact
             </motion.button>
           </Link>
           <Link href="/work">
             <motion.button 
-              whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border border-gray-200 dark:border-white/10 rounded-md text-sm font-bold hover:bg-gray-50 dark:hover:bg-white/5 transition-all dark:text-white w-full sm:w-auto"
+              className="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all w-full sm:w-auto shadow-sm"
             >
               Work
             </motion.button>

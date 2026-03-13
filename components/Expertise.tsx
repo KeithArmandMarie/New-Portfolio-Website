@@ -71,7 +71,7 @@ export const Expertise = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 border border-black dark:border-white rounded-md text-sm font-semibold hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all shadow-sm hover:shadow-md dark:text-white"
+              className="bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm"
             >
               View more Services
             </motion.button>

@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       <LogoMarquee />
       <Expertise />
-      <RecentWorks />
+      <RecentWorks limit={3} />
       <Testimonials />
       <ContactCTA />
       <Footer />

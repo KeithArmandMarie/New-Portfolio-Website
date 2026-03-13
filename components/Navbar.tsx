@@ -133,7 +133,7 @@ export const Navbar = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Link href="mailto:caballerokeith2@gmail.com">
-                <button className="bg-black dark:bg-white dark:text-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all shadow-lg shadow-black/10 hover:shadow-[#00FF00]/20">
+                <button className="bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm">
                   Let&apos;s Talk
                 </button>
               </Link>
