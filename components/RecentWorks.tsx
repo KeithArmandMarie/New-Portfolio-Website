@@ -63,20 +63,6 @@ const projects = [
     tags: ['Agency', 'Marketing', 'Creative'],
     link: 'https://canirydigitalagency.vercel.app/',
   },
-  {
-    title: 'GalacticGlaze',
-    description: 'A space-themed website concept design, focusing on a unique brand identity and a playful user interface.',
-    image: '/galacticglaze.png',
-    tags: ['UI/UX Design', 'Branding', 'Figma'],
-    link: 'https://www.figma.com/proto/k7cz8X4GoKnvEIpjhevpQ6/GalacticGlaze?page-id=0%3A1&node-id=8-8&viewport=-227%2C-275%2C0.4&t=Svg6eMxCZYeVXNDp-1&scaling=min-zoom&starting-point-node-id=8%3A8&hide-ui=1',
-  },
-  {
-    title: 'Inferior Fashion',
-    description: 'A minimalist fashion brand prototype that explores high-end e-commerce interactions and a clean, editorial-style layout.',
-    image: '/inferior.png',
-    tags: ['E-commerce', 'Minimalism', 'Figma'],
-    link: 'https://www.figma.com/proto/dAq7SW0mpFU7TD457txNog/Inferior?page-id=0%3A1&node-id=6-25&viewport=-2161%2C-4141%2C0.85&t=c3bRkiSlUhXrLCGC-1&scaling=min-zoom&hide-ui=1',
-  },
 ];
 
 interface RecentWorksProps {
