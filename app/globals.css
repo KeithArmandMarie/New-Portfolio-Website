@@ -1,31 +1,21 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
   --color-dark-bg: #050505;
+  --font-sans: var(--font-sans);
 }
 
 @layer base {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
   
   body {
-    @apply transition-[background-color,color] duration-500 ease-in-out;
-  }
-  
-  .theme-transitioning {
-    cursor: wait;
-  }
-  
-  button, 
-  a, 
-  [role="button"] {
-    cursor: pointer;
+    @apply antialiased bg-white text-black dark:bg-[#050505] dark:text-white transition-colors duration-300;
+    font-family: var(--font-sans), system-ui, sans-serif;
   }
 }
-
-/* Enable class-based dark mode for Tailwind v4 */
-@variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
   .bg-noise {
