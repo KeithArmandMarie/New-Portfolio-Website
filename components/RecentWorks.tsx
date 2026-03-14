@@ -31,35 +31,35 @@ const projects = [
   {
     title: 'AI Headshot Pro',
     description: 'An AI-powered platform that generates professional-grade headshots from casual photos, streamlining the process for professionals and teams.',
-    image: '/aiheadshot.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fai-headshot-pro-sooty.vercel.app%2F?w=800&h=600',
     tags: ['AI', 'SaaS', 'Web App'],
     link: 'https://ai-headshot-pro-sooty.vercel.app/',
   },
   {
     title: 'Professional Plumber',
     description: 'A high-converting service website for plumbing businesses, featuring online booking, service listings, and a mobile-first design.',
-    image: '/plumbing.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fplumber-website-black.vercel.app%2F?w=800&h=600',
     tags: ['Service Industry', 'Web Design', 'SEO'],
     link: 'https://plumber-website-black.vercel.app/',
   },
   {
     title: 'Portfolio v2',
     description: 'An elegant, interactive portfolio website built with Framer, featuring smooth animations and a personalized guest experience.',
-    image: '/portfolio.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fkeitharmandmarie.framer.website%2F?w=800&h=600',
     tags: ['Event Design', 'Framer', 'Interactive'],
     link: 'https://keitharmandmarie.framer.website/',
   },
   {
     title: 'Nexux Platform',
     description: 'A modern tech platform landing page designed for scalability and user engagement, showcasing innovative software solutions.',
-    image: '/nexus.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnexux-chi.vercel.app%2F?w=800&h=600',
     tags: ['Tech', 'SaaS', 'Landing Page'],
     link: 'https://nexux-chi.vercel.app/',
   },
   {
     title: 'Caniry Digital Agency',
     description: 'A vibrant, creative agency website that highlights digital marketing services and portfolio work with a focus on conversion.',
-    image: '/caniry.png',
+    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcanirydigitalagency.vercel.app%2F?w=800&h=600',
     tags: ['Agency', 'Marketing', 'Creative'],
     link: 'https://canirydigitalagency.vercel.app/',
   },
@@ -116,6 +116,7 @@ export const RecentWorks = ({ limit }: RecentWorksProps) => {
                   src={project.image}
                   alt={project.title}
                   fill
+                  unoptimized={project.image.startsWith('/')}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
