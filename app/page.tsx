@@ -9,18 +9,31 @@ import { Testimonials } from '@/components/Testimonials';
 import { ContactCTA } from '@/components/ContactCTA';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <LogoMarquee />
-      <Expertise />
-      <RecentWorks limit={3} />
-      <Testimonials />
-      <ContactCTA />
-      <Footer />
+      <ScrollReveal>
+        <LogoMarquee />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Expertise />
+      </ScrollReveal>
+      <ScrollReveal>
+        <RecentWorks limit={3} />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Testimonials />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ContactCTA />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Footer />
+      </ScrollReveal>
       <ScrollToTop />
     </main>
   );
