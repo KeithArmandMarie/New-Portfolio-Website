@@ -15,6 +15,12 @@
     @apply antialiased bg-white text-black dark:bg-[#050505] dark:text-white transition-colors duration-300;
     font-family: var(--font-sans), system-ui, sans-serif;
   }
+
+  button, 
+  a, 
+  [role="button"] {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {
