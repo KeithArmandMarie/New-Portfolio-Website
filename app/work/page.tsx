@@ -7,6 +7,8 @@ import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
 import { RecentWorks } from '@/components/RecentWorks';
+import { CaseStudies } from '@/components/CaseStudies';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 export default function WorkPage() {
   return (
@@ -36,7 +38,13 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <RecentWorks />
+      <ScrollReveal>
+        <CaseStudies />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <RecentWorks />
+      </ScrollReveal>
       
       <ContactCTA />
       <Footer />
