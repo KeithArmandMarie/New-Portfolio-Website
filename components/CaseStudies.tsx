@@ -12,7 +12,7 @@ const caseStudies = [
     slug: 'elev8-consulting',
     subtitle: 'Streamlining Occupational Rehabilitation',
     description: 'A comprehensive digital transformation for an Australian healthcare provider. We focused on building a trust-centric platform that simplifies the referral process for complex occupational rehabilitation services.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Felev8consulting.au%2F?w=1200&h=800',
+    image: '/elev8-consulting.png',
     tags: ['Healthcare', 'WordPress', 'UX Strategy', 'Conversion Optimization'],
     link: 'https://elev8consulting.au/',
     stats: [
@@ -25,7 +25,7 @@ const caseStudies = [
     slug: 'elev8-wellness-health',
     subtitle: 'Empowering Holistic Wellbeing',
     description: 'Designing an accessible and approachable platform for NDIS and Home Care Package clients. The goal was to create a digital space that feels supportive while providing clear pathways to independence.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Felev8wellnesshealth.au%2F?w=1200&h=800',
+    image: '/elev8-wellness.png',
     tags: ['Healthcare', 'UI/UX Design', 'Accessibility', 'NDIS'],
     link: 'https://elev8wellnesshealth.au/',
     stats: [
@@ -100,7 +100,7 @@ export const CaseStudies = () => {
 
                 <div className="flex flex-wrap gap-6 pt-4">
                   <Link href={`/work/${study.slug}`}>
-                    <motion.button 
+                    <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-[#00FF00] text-black px-8 py-3 rounded-full text-sm font-bold hover:bg-[#00DD00] transition-all flex items-center shadow-lg shadow-[#00FF00]/20"
@@ -109,12 +109,12 @@ export const CaseStudies = () => {
                     </motion.button>
                   </Link>
 
-                  <Link 
-                    href={study.link} 
-                    target="_blank" 
+                  <Link
+                    href={study.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <motion.button 
+                    <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="border border-zinc-200 dark:border-white/10 dark:text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-zinc-50 dark:hover:bg-white/5 transition-all flex items-center"
