@@ -16,7 +16,7 @@ const caseStudiesData = {
     title: 'ELEV8 Consulting',
     subtitle: 'Website UX Strategy and Digital Platform Design',
     description: 'A comprehensive digital transformation for an Australian healthcare provider. We focused on building a trust-centric platform that simplifies the referral process for complex occupational rehabilitation services.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Felev8consulting.au%2F?w=1920&h=1080',
+    image: '/elev8-consulting.png',
     link: 'https://elev8consulting.au/',
     tags: ['Healthcare', 'WordPress', 'UX Strategy', 'Conversion Optimization'],
     overview: 'ELEV8 Consulting provides rehabilitation and recovery services for individuals who were injured in their workplace. The organization works closely with businesses, employees, and healthcare professionals to support recovery, rebuild confidence, and enable a safe return to work.',
@@ -42,7 +42,7 @@ const caseStudiesData = {
     title: 'ELEV8 Wellness & Health',
     subtitle: 'Website Design for Workplace Wellness Programs',
     description: 'Designing an accessible and approachable platform for NDIS and Home Care Package clients. The goal was to create a digital space that feels supportive while providing clear pathways to independence.',
-    image: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Felev8wellnesshealth.au%2F?w=1920&h=1080',
+    image: '/elev8-wellness.png',
     link: 'https://elev8wellnesshealth.au/',
     tags: ['Healthcare', 'UI/UX Design', 'Accessibility', 'NDIS'],
     overview: 'ELEV8 Wellness and Health focuses on improving employee wellbeing through programs that support recovery, resilience, and long term health outcomes.',
@@ -77,7 +77,7 @@ export default function CaseStudyPage() {
       <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#050505]">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4 dark:text-white">Case Study Not Found</h1>
-          <button 
+          <button
             onClick={() => router.push('/work')}
             className="text-[#00FF00] font-bold flex items-center justify-center mx-auto"
           >
@@ -119,7 +119,7 @@ export default function CaseStudyPage() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
