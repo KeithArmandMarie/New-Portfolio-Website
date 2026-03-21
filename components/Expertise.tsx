@@ -2,29 +2,29 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Layout, Monitor, Code, PenTool } from 'lucide-react';
+import { Layout, Monitor, Code, Framer } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const services = [
   {
     title: 'UI/UX Design',
-    description: 'I design intuitive, user-centered interfaces that balance aesthetics with functionality, ensuring a seamless journey for your clients.',
+    description: 'I craft refined, user-centric experiences that balance aesthetics and functionality, designed to elevate engagement and guide users toward meaningful action.',
     icon: Layout,
   },
   {
     title: 'WordPress Development',
-    description: 'Custom WordPress solutions built for performance, security, and ease of use, tailored specifically for service-based businesses.',
+    description: 'I develop bespoke WordPress websites engineered for performance, scalability, and seamless content management—built to support long-term growth.',
     icon: Code,
   },
   {
-    title: 'Website Strategy',
-    description: 'I help businesses define their online goals and create a strategic roadmap to achieve measurable results and growth.',
-    icon: Monitor,
+    title: 'Framer Development',
+    description: 'I design and develop modern, immersive websites in Framer, combining fluid interactions with high-performance builds to create standout digital experiences.',
+    icon: Framer,
   },
   {
-    title: 'Performance Optimization',
-    description: 'Ensuring your website loads lightning fast and performs at its best across all devices and search engines.',
-    icon: PenTool,
+    title: 'Website Development',
+    description: 'I build high-performance, fully responsive websites with precision and attention to detail, ensuring a seamless and elevated experience across all devices.',
+    icon: Monitor,
   },
 ];
 
