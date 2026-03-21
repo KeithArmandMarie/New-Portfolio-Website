@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { LogoMarquee } from '@/components/LogoMarquee';
 import { Layout, Monitor, Code, Target, RefreshCcw, Palette, Search, Wrench, Framer, Headset } from 'lucide-react';
 
 const allServices = [
@@ -92,57 +93,37 @@ export default function ServicesPage() {
         </section>
       </ScrollReveal>
 
-      {/* Services Marquee Section */}
+      {/* Services List Section (Compact Layout) */}
       <ScrollReveal>
-        <section className="relative py-12 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden flex flex-col gap-6">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 w-32 md:w-[250px] h-full bg-gradient-to-r from-white dark:from-[#050505] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-32 md:w-[250px] h-full bg-gradient-to-l from-white dark:from-[#050505] to-transparent z-10 pointer-events-none"></div>
-          
-          {/* Row 1 */}
-          <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-6" style={{ animationDuration: '90s' }}>
-            {[...allServices.slice(0, 5), ...allServices.slice(0, 5)].map((service, index) => (
-              <div
-                key={index}
-                className="w-[320px] md:w-[400px] shrink-0 p-8 rounded-3xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-[#00FF00]/50 transition-all duration-300 group pointer-events-auto cursor-default"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 bg-white dark:bg-black rounded-2xl shadow-sm group-hover:bg-[#00FF00]/10 transition-colors">
-                    <service.icon className="w-6 h-6 text-zinc-800 dark:text-zinc-200 group-hover:text-[#00DD00] transition-colors" strokeWidth={1.5} />
+        <section className="relative pb-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+              {allServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="p-6 rounded-2xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-[#00FF00]/50 hover:bg-[#00FF00]/5 transition-all duration-300 group"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-white dark:bg-black rounded-xl shadow-sm group-hover:bg-[#00FF00]/10 transition-colors">
+                      <service.icon className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-[#00DD00] transition-colors" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium tracking-[-0.04em] dark:text-white group-hover:text-[#00DD00] transition-colors">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-medium tracking-[-0.04em] dark:text-white group-hover:text-[#00DD00] transition-colors">
-                    {service.title}
-                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-[1.6]">
+                    {service.description}
+                  </p>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-[1.6]">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2 */}
-          <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-6" style={{ animationDuration: '120s', animationDirection: 'reverse' }}>
-            {[...allServices.slice(5), ...allServices.slice(5)].map((service, index) => (
-              <div
-                key={`row2-${index}`}
-                className="w-[320px] md:w-[400px] shrink-0 p-8 rounded-3xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-[#00FF00]/50 transition-all duration-300 group pointer-events-auto cursor-default"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 bg-white dark:bg-black rounded-2xl shadow-sm group-hover:bg-[#00FF00]/10 transition-colors">
-                    <service.icon className="w-6 h-6 text-zinc-800 dark:text-zinc-200 group-hover:text-[#00DD00] transition-colors" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-medium tracking-[-0.04em] dark:text-white group-hover:text-[#00DD00] transition-colors">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-[1.6]">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
+      </ScrollReveal>
+
+      {/* Logos Marquee Section */}
+      <ScrollReveal>
+        <LogoMarquee />
       </ScrollReveal>
 
       {/* Process Section */}
@@ -196,7 +177,7 @@ export default function ServicesPage() {
           </div>
         </section>
       </ScrollReveal>
-      
+
       <ScrollReveal>
         <ContactCTA />
       </ScrollReveal>
