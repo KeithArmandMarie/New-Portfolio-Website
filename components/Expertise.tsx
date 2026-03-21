@@ -38,9 +38,9 @@ export const Expertise = () => {
         </div>
         <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">My Expertise</h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-16 leading-[1.2] tracking-[-0.04em]">
-          I design and develop websites that work as hard as you do. No unnecessary features. No wasted space.
+          I design and develop websites that work as hard as you do. <br />No unnecessary features. No wasted space.<br />
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
           {services.map((service, index) => (
             <motion.div
@@ -52,7 +52,7 @@ export const Expertise = () => {
               whileHover={{ y: -10 }}
               className="group cursor-default"
             >
-              <motion.div 
+              <motion.div
                 className="mb-6 p-3 inline-block bg-gray-50 dark:bg-white/5 rounded-lg group-hover:bg-[#00FF00]/20 transition-all duration-300"
                 whileHover={{ rotate: 5, scale: 1.1 }}
               >
@@ -65,10 +65,10 @@ export const Expertise = () => {
             </motion.div>
           ))}
         </div>
-        
+
         <div className="mt-16">
           <Link href="/services">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm"
