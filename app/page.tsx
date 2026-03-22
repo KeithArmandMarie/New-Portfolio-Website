@@ -10,6 +10,7 @@ import { ContactCTA } from '@/components/ContactCTA';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { BlogSection } from '@/components/BlogSection';
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal>
         <Testimonials />
+      </ScrollReveal>
+      <ScrollReveal>
+        <BlogSection />
       </ScrollReveal>
       <ScrollReveal>
         <ContactCTA />

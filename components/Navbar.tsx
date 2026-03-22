@@ -77,7 +77,7 @@ export const Navbar = () => {
           </motion.div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            {['Home', 'About', 'Work', 'Services'].map((item) => (
+            {['Home', 'About', 'Work', 'Services', 'Blogs'].map((item) => (
               <motion.div key={item} variants={itemVariants}>
                 <Link 
                   href={
