@@ -262,6 +262,116 @@ export const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=800&auto=format&fit=crop',
     category: 'Design & Code'
+  },
+  {
+    id: '3',
+    slug: 'why-you-should-hire-a-web-designer-not-just-a-developer',
+    title: 'Why You Should Hire a Web Designer Not Just a Developer',
+    excerpt: 'Because a website that works isn’t the same as a website that connects. A developer builds the structure. A web designer shapes the experience.',
+    content: `
+      <p>It’s tempting to think a developer can handle everything when building a website. After all, they can code, fix bugs, and make things work. So why bring a web designer into the mix?</p>
+
+      <p>Because a website that <em>works</em> isn’t the same as a website that <em>connects</em>.</p>
+
+      <p>A developer builds the structure. A <strong>web designer shapes the experience</strong> — how it looks, feels, and guides users. And in a world where attention spans are short and competition is fierce, that difference can make or break your online presence.</p>
+
+      <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop" alt="Web design wireframing" class="w-full rounded-2xl my-8 max-h-[400px] object-cover shadow-lg" />
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Design Is More Than Just “Making It Look Good”</h2>
+      <p>A common misconception is that web design is purely visual — colors, fonts, and layouts. In reality, it’s much deeper than that.</p>
+
+      <p>A good designer thinks about:</p>
+      <ul>
+        <li><strong>User behavior</strong>: Where will visitors click? What will they notice first?</li>
+        <li><strong>Visual hierarchy</strong>: What information should stand out?</li>
+        <li><strong>Flow and navigation</strong>: How easily can users move through your site?</li>
+      </ul>
+
+      <p>Without this layer of thinking, even a perfectly coded website can feel confusing or overwhelming.</p>
+
+      <p>Imagine walking into a store where everything is technically in place but nothing is organized. You’d probably leave within seconds. That’s exactly what happens when design is ignored.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>First Impressions Happen Fast</h2>
+      <p>Users form an opinion about your website in less than a second. That initial reaction isn’t based on your code. It’s based on design.</p>
+
+      <p>A web designer ensures:</p>
+      <ul>
+        <li>Your site feels modern and trustworthy</li>
+        <li>Your branding is consistent</li>
+        <li>Your layout instantly communicates value</li>
+      </ul>
+
+      <p>Developers can build functional pages, but they don’t always prioritize emotional impact. Designers do.</p>
+
+      <p>And that emotional impact matters. People don’t just use websites. They <em>experience</em> them.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Better Design = Better Conversions</h2>
+      <p>If your goal is to get leads, sales, or sign ups, design plays a huge role.</p>
+
+      <p>A web designer understands how to:</p>
+      <ul>
+        <li>Position call to action buttons effectively</li>
+        <li>Use spacing and contrast to guide attention</li>
+        <li>Reduce friction in user journeys</li>
+      </ul>
+
+      <p>It’s not random. It’s intentional.</p>
+
+      <p>A developer might place a button where it technically fits. A designer places it where users are <strong>most likely to click</strong>.</p>
+
+      <p>That difference can directly impact your results. A well designed website doesn’t just look better. It performs better.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Developers Focus on Function Designers Focus on Experience</h2>
+      <p>Developers and designers solve different problems.</p>
+
+      <ul>
+        <li><strong>Developers</strong> ask: “Does it work?”</li>
+        <li><strong>Designers</strong> ask: “Does it feel right?”</li>
+      </ul>
+
+      <p>You need both but skipping design creates a gap.</p>
+
+      <p>For example, a developer might build a fast loading page with all the right features. But if the layout is cluttered or unintuitive, users won’t stay long enough to appreciate it.</p>
+
+      <p>Design bridges that gap between functionality and usability.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Stand Out in a Crowded Digital Space</h2>
+      <p>The internet is full of websites that look the same.</p>
+
+      <p>Templates, generic layouts, and cookie cutter designs are everywhere. Without a designer, your site risks blending in instead of standing out.</p>
+
+      <p>A web designer helps you:</p>
+      <ul>
+        <li>Create a unique visual identity</li>
+        <li>Align your website with your brand voice</li>
+        <li>Build something memorable</li>
+      </ul>
+
+      <p>In competitive industries, that uniqueness isn’t optional. It’s necessary.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Conclusion</h2>
+      <p>Hiring only a developer is like building a house with no interior design. It may be structurally sound, but it won’t feel inviting or intuitive.</p>
+
+      <p>A web designer brings strategy, clarity, and creativity into the process. They don’t just make your site look better. They make it <strong>work better for your users</strong>.</p>
+
+      <p>If you want a website that attracts, engages, and converts, design isn’t an extra. It’s essential.</p>
+    `,
+    date: 'March 22, 2026',
+    readTime: '4 min read',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop',
+    category: 'Design'
   }
 ];
 

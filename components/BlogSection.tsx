@@ -9,10 +9,14 @@ import { blogPosts } from '@/lib/blogData';
 
 interface BlogSectionProps {
   limit?: number;
+  excludeSlug?: string;
+  title?: string;
 }
 
-export const BlogSection = ({ limit = 3 }: BlogSectionProps) => {
-  const displayedPosts = blogPosts.slice(0, limit);
+export const BlogSection = ({ limit = 3, excludeSlug, title = "Blogs & Articles" }: BlogSectionProps) => {
+  const displayedPosts = blogPosts
+    .filter(post => post.slug !== excludeSlug)
+    .slice(0, limit);
 
   return (
     <section id="blogs" className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden border-t border-gray-100 dark:border-white/5">
@@ -22,7 +26,7 @@ export const BlogSection = ({ limit = 3 }: BlogSectionProps) => {
           <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
             Insights
           </div>
-          <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">Blogs & Articles</h2>
+          <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">{title}</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-[1.2] tracking-[-0.04em]">
             Thoughts, tutorials, and insights on development, design, and building the web.
           </p>

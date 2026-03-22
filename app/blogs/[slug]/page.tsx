@@ -7,6 +7,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { getBlogPostBySlug, blogPosts } from '@/lib/blogData';
+import { BlogSection } from '@/components/BlogSection';
 
 // Enable static generation for these blogs
 export function generateStaticParams() {
@@ -83,6 +84,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* We are rendering raw HTML strings stored in our mock data directly here. */}
         </section>
       </article>
+
+      <BlogSection limit={3} excludeSlug={post.slug} title="Read Next" />
 
       <Footer />
       <ScrollToTop />
