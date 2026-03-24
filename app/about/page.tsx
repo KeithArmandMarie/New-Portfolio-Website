@@ -58,7 +58,7 @@ const education = [
 
 const skills = [
   { category: 'Design', items: ['UI/UX Design', 'Wireframing', 'Prototyping', 'Graphic Design', 'Brand Identity', 'Framer', 'Balsamiq'] },
-  { category: 'Development', items: ['Frontend Development', 'WordPress', 'Avada Builder', 'React', 'Tailwind CSS', 'Elementor'] },
+  { category: 'Development', items: ['Frontend Development', 'WordPress', 'WP Theme Customization', 'Avada Builder', 'React', 'Tailwind CSS', 'Elementor'] },
   { category: 'Tools', items: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'VS Code', 'Git', 'Github','Socialpilot'] },
   { category: 'Strategy', items: ['SEO Optimization', 'Copywriting', 'User Research', 'Information Architecture'] },
 ];
