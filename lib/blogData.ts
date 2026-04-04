@@ -10,7 +10,7 @@ export interface BlogPost {
   category: string;
 }
 
-export const blogPosts: BlogPost[] = [
+const rawBlogPosts: BlogPost[] = [
   {
     id: '1',
     slug: 'how-ai-supported-ides-revolutionized-coding',
@@ -372,8 +372,110 @@ export const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop',
     category: 'Design'
+  },
+  {
+    id: '4',
+    slug: 'why-website-speed-matters-more-than-you-think',
+    title: 'Why Website Speed Matters More Than You Think',
+    excerpt: 'You can have the best design, the strongest branding, and perfectly written content. But if your website is slow, none of it will matter.',
+    content: `
+      <p>You can have the best design, the strongest branding, and perfectly written content. But if your website is slow, none of it will matter.</p>
+
+      <p>Speed is often overlooked, yet it plays a huge role in how users experience your site. People expect websites to load almost instantly. If yours doesn't, they won't wait around. They'll leave and likely never come back.</p>
+
+      <p>A fast website does more than improve performance. It builds trust, keeps users engaged, and directly impacts your results.</p>
+
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop" alt="Website speed and performance" class="w-full rounded-2xl my-8 max-h-[400px] object-cover shadow-lg" />
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>First Impressions Are Tied to Speed</h2>
+      <p>When someone visits your website, the clock starts ticking immediately. Within seconds, they decide whether to stay or leave.</p>
+
+      <p>If your site loads quickly, it feels smooth and professional. If it takes too long, it creates frustration right away.</p>
+
+      <p>Users don't usually think, "This site is slow." They think, "This doesn't feel right." That subtle feeling is enough to push them away.</p>
+
+      <p>Speed shapes perception. A fast site feels modern and reliable. A slow one feels outdated, even if the design looks good.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Speed Directly Affects User Experience</h2>
+      <p>A slow website interrupts the user journey. Every delay adds friction.</p>
+
+      <p>Imagine clicking on a page and waiting… then clicking again and waiting more. It breaks the flow. Users lose interest, and their attention shifts elsewhere.</p>
+
+      <p>A fast website keeps everything moving. It allows users to:</p>
+      <ul>
+        <li>Navigate smoothly</li>
+        <li>Find information quickly</li>
+        <li>Interact without frustration</li>
+      </ul>
+
+      <p>That smooth experience encourages users to stay longer and explore more.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Faster Websites Get Better Results</h2>
+      <p>Speed is not just about user experience. It directly affects performance.</p>
+
+      <p>A faster site can lead to:</p>
+      <ul>
+        <li>Higher conversion rates</li>
+        <li>Lower bounce rates</li>
+        <li>More engagement</li>
+      </ul>
+
+      <p>Even small delays can have a noticeable impact. A difference of one or two seconds can reduce the number of people who complete a form or make a purchase.</p>
+
+      <p>Think about it this way. Every extra second is an opportunity for someone to leave. Improving speed removes that risk.</p>
+
+      <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop" alt="Performance analytics and results" class="w-full rounded-2xl my-8 max-h-[400px] object-cover shadow-lg" />
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>SEO and Search Rankings Depend on Speed</h2>
+      <p>Search engines care about user experience, and speed is a big part of that.</p>
+
+      <p>Faster websites are more likely to rank higher in search results. This means more visibility and more traffic over time.</p>
+
+      <p>Google, for example, considers page speed as a ranking factor. If your site is slow, it becomes harder to compete, even if your content is strong.</p>
+
+      <p>Speed is not just a technical detail. It is a key part of your overall SEO strategy.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>What Makes a Website Slow</h2>
+      <p>There are several common reasons why websites slow down:</p>
+      <ul>
+        <li>Large, unoptimized images</li>
+        <li>Too many plugins or scripts</li>
+        <li>Poor hosting</li>
+        <li>Unnecessary animations or effects</li>
+      </ul>
+
+      <p>These issues often build up over time, especially if performance is not a priority from the start.</p>
+
+      <p>The good news is that most of them can be fixed with the right approach.</p>
+
+      <hr class="my-8 border-gray-200 dark:border-white/10" />
+
+      <h2>Conclusion</h2>
+      <p>Website speed is not just a technical feature. It is a core part of how users experience your brand.</p>
+
+      <p>A fast website feels smooth, reliable, and easy to use. A slow one creates frustration and drives people away.</p>
+
+      <p>If you want better engagement, stronger SEO, and higher conversions, speed should never be an afterthought. It should be a priority from day one.</p>
+    `,
+    date: 'April 4, 2026',
+    readTime: '5 min read',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop',
+    category: 'Performance'
   }
 ];
+
+// Sort blog posts by date (newest first)
+export const blogPosts = [...rawBlogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug);
