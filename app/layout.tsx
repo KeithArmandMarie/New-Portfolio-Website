@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { Preloader } from '@/components/Preloader';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </SmoothScroll>
         </ThemeProvider>
         <GoogleAnalytics gaId="G-BWKR8QJ000" />
+        <SpeedInsights />
       </body>
     </html>
   );
