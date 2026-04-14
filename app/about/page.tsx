@@ -6,7 +6,19 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
-import { Briefcase, GraduationCap, Code2 } from 'lucide-react';
+import { 
+  Briefcase, GraduationCap, Code2, 
+  Layout, SquareDashed, Layers, Palette, Fingerprint, PencilRuler,
+  Monitor, Paintbrush, Wrench, Share2,
+  Search, PenLine, Users, Network, Clapperboard
+} from 'lucide-react';
+import { 
+  SiFramer, SiTailwindcss, SiReact, SiElementor, SiWordpress, 
+  SiFigma, SiGit, SiGithub,
+  SiCanva, SiClaude, SiOpenai, SiGooglegemini
+} from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
+import { DiPhotoshop, DiIllustrator } from 'react-icons/di';
 import Image from 'next/image';
 import { BentoProfile } from '@/components/BentoProfile';
 
@@ -57,10 +69,60 @@ const education = [
 ];
 
 const skills = [
-  { category: 'Design', items: ['UI/UX Design', 'Wireframing', 'Prototyping', 'Graphic Design', 'Brand Identity', 'Framer', 'Balsamiq'] },
-  { category: 'Development', items: ['Frontend Development', 'WordPress', 'WP Theme Customization', 'Avada Builder', 'React', 'Tailwind CSS', 'Elementor'] },
-  { category: 'Tools', items: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'VS Code', 'Git', 'Github','Socialpilot'] },
-  { category: 'Strategy', items: ['SEO Optimization', 'Copywriting', 'User Research', 'Information Architecture'] },
+  { 
+    category: 'Design', 
+    bentoClass: 'md:col-span-3',
+    items: [
+      { name: 'UI/UX Design', icon: <Layout className="w-3.5 h-3.5" /> }, 
+      { name: 'Wireframing', icon: <SquareDashed className="w-3.5 h-3.5" /> }, 
+      { name: 'Prototyping', icon: <Layers className="w-3.5 h-3.5" /> }, 
+      { name: 'Graphic Design', icon: <Palette className="w-3.5 h-3.5" /> }, 
+      { name: 'Brand Identity', icon: <Fingerprint className="w-3.5 h-3.5" /> }, 
+      { name: 'Framer', icon: <SiFramer className="w-3.5 h-3.5" /> }, 
+      { name: 'Balsamiq', icon: <PencilRuler className="w-3.5 h-3.5" /> }
+    ] 
+  },
+  { 
+    category: 'Development',
+    bentoClass: 'md:col-span-2',
+    items: [
+      { name: 'Frontend Development', icon: <Monitor className="w-3.5 h-3.5" /> }, 
+      { name: 'WordPress', icon: <SiWordpress className="w-3.5 h-3.5" /> }, 
+      { name: 'WP Theme Customization', icon: <Paintbrush className="w-3.5 h-3.5" /> }, 
+      { name: 'Avada Builder', icon: <Wrench className="w-3.5 h-3.5" /> }, 
+      { name: 'React', icon: <SiReact className="w-3.5 h-3.5" /> }, 
+      { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-3.5 h-3.5" /> }, 
+      { name: 'Elementor', icon: <SiElementor className="w-3.5 h-3.5" /> }
+    ] 
+  },
+  { 
+    category: 'Tools', 
+    bentoClass: 'md:col-span-3',
+    items: [
+      { name: 'Figma', icon: <SiFigma className="w-3.5 h-3.5" /> }, 
+      { name: 'Adobe Photoshop', icon: <DiPhotoshop className="w-3.5 h-3.5" /> }, 
+      { name: 'Adobe Illustrator', icon: <DiIllustrator className="w-3.5 h-3.5" /> }, 
+      { name: 'VS Code', icon: <VscVscode className="w-3.5 h-3.5" /> }, 
+      { name: 'Git', icon: <SiGit className="w-3.5 h-3.5" /> }, 
+      { name: 'Github', icon: <SiGithub className="w-3.5 h-3.5" /> },
+      { name: 'Socialpilot', icon: <Share2 className="w-3.5 h-3.5" /> },
+      { name: 'Canva', icon: <SiCanva className="w-3.5 h-3.5" /> },
+      { name: 'Capcut', icon: <Clapperboard className="w-3.5 h-3.5" /> },
+      { name: 'Claude AI', icon: <SiClaude className="w-3.5 h-3.5" /> },
+      { name: 'ChatGPT', icon: <SiOpenai className="w-3.5 h-3.5" /> },
+      { name: 'Google Anti Gravity', icon: <SiGooglegemini className="w-3.5 h-3.5" /> }
+    ] 
+  },
+  { 
+    category: 'Strategy', 
+    bentoClass: 'md:col-span-2',
+    items: [
+      { name: 'SEO Optimization', icon: <Search className="w-3.5 h-3.5" /> }, 
+      { name: 'Copywriting', icon: <PenLine className="w-3.5 h-3.5" /> }, 
+      { name: 'User Research', icon: <Users className="w-3.5 h-3.5" /> }, 
+      { name: 'Information Architecture', icon: <Network className="w-3.5 h-3.5" /> }
+    ] 
+  },
 ];
 
 export default function AboutPage() {
@@ -146,7 +208,7 @@ export default function AboutPage() {
                 The technical toolkit and creative methodologies I use to bring ideas to life.
               </p>
             </div>
-            <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6">
               {skills.map((skillGroup, index) => (
                 <motion.div
                   key={index}
@@ -154,13 +216,14 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 hover:border-[#00FF00]/50 transition-colors group"
+                  className={`p-8 rounded-[2rem] bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/5 hover:border-[#00FF00]/30 transition-all duration-300 group shadow-sm hover:shadow-md ${skillGroup.bentoClass}`}
                 >
                   <h3 className="text-lg font-bold mb-4 dark:text-white group-hover:text-[#00FF00] transition-colors">{skillGroup.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill, i) => (
-                      <span key={i} className="px-3 py-1 bg-white dark:bg-white/10 rounded-full text-[10px] font-bold uppercase tracking-wider dark:text-gray-300">
-                        {skill}
+                      <span key={i} className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-white/10 border border-gray-100 dark:border-transparent rounded-full text-[10px] font-bold uppercase tracking-wider dark:text-gray-300 hover:border-[#00FF00]/50 hover:bg-[#00FF00]/5 dark:hover:bg-[#00FF00]/10 hover:text-[#00FF00] dark:hover:text-[#00FF00] transition-colors cursor-default">
+                        {skill.icon}
+                        <span>{skill.name}</span>
                       </span>
                     ))}
                   </div>
