@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
 import { 
-  Briefcase, GraduationCap, Code2, 
+  Briefcase, GraduationCap, Code2, Trophy, ExternalLink,
   Layout, SquareDashed, Layers, Palette, Fingerprint, PencilRuler,
   Monitor, Paintbrush, Wrench, Share2,
   Search, PenLine, Users, Network, Clapperboard
@@ -50,11 +50,49 @@ const experiences = [
   },
 ];
 
-const education = [
+const achievements = [
+  {
+    title: 'ELEV8 CONSULTING',
+    role: 'LEAD DESIGNER & DEVELOPER',
+    year: '2025-2026',
+    description: 'Lead designing and developing two websites for an Australian company focusing on workplace injury rehabilitation.',
+    link: 'https://elev8consulting.au/'
+  },
+  {
+    title: 'GOGORILLA',
+    role: 'REBRANDING',
+    year: '2024',
+    description: 'I was one of the designers who contributed to creating, designing, and publishing the rebranded GoGorilla to the public.',
+    link: 'https://gogorilla.com/'
+  },
+  {
+    title: 'LATIN HONOR AWARDEE',
+    role: 'CUM LAUDE',
+    year: '2023',
+    description: 'Graduated with flying colors. I was among the pioneering group to achieve Cum Laude honors in our program.',
+  },
+  {
+    title: 'DAVAO UNITY AWARD WINNER',
+    role: 'CAPSTONE COMPETITION',
+    year: '2023',
+    description: 'The Davao Unity Awards honors outstanding thesis papers that contribute to local government programs and promote academic research. I led a team of five to win the 2023 Health Category with our capstone project, "Skincure: An Android-Based Skin Disease Classifier System using CNN."',
+    link: 'https://www.facebook.com/davaocitygov/posts/look-the-city-government-of-davao-gave-recognition-to-six-6-of-the-most-innovati/228264349715479/'
+  },
+  {
+    title: 'INTERNATIONAL JOURNAL OF SCIENTIFIC RESEARCH AND ENGINEERING DEVELOPMENT',
+    role: 'RESEARCH PUBLICATION',
+    year: '2021',
+    description: 'Co-authored a scientific study that has been published in Volume 4 Issue 4 -2021 of IJSRED.',
+    link: 'https://ijsred.com/volume4/issue4/IJSRED-V4I4P5.pdf'
+  }
+];
+
+const education: { level: string; school: string; description: string; image?: string }[] = [
   {
     level: 'College',
     school: 'Jose Maria College Foundation Inc.',
     description: 'I pursued a Bachelor of Science in Information Technology, where I developed a strong understanding of web technologies and how the web functions. My dedication to learning and passion for the field earned me the honor of graduating as Cum Laude, marking a proud milestone in my academic journey.',
+    image: '/college-grad.jpg',
   },
   {
     level: 'Highschool',
@@ -234,9 +272,71 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Education Section */}
+      {/* Achievements Section */}
       <section className="relative py-24 bg-gray-50 dark:bg-[#0a0a0a] transition-colors duration-300">
         <div className="absolute inset-0 bg-dots opacity-50 pointer-events-none"></div>
+        <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
+          <div className="flex flex-col md:flex-row gap-12 items-start">
+            <div className="md:w-1/3 md:sticky md:top-32">
+              <h2 className="text-4xl font-medium tracking-[-0.06em] dark:text-white flex items-center gap-3 uppercase">
+                <Trophy className="text-[#00FF00]" /> Achievements
+              </h2>
+              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 max-w-xs">
+                Milestones, awards, and noteworthy projects in my career.
+              </p>
+            </div>
+            <div className="md:w-2/3 space-y-12">
+              {achievements.map((ach, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-4">
+                    {ach.link ? (
+                      <a 
+                        href={ach.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group/link flex items-center gap-2 max-w-lg cursor-pointer"
+                        style={{ cursor: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDYwIDMwIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIGZpbGw9IiMwMEZGMDAiIHJ4PSIxNSIvPjx0ZXh0IHg9IjMwIiB5PSIxOSIgZmlsbD0iYmxhY2siIGZvbnQtc2l6ZT0iMTIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VmlldzwvdGV4dD48L3N2Zz4=') 30 15, pointer" }}
+                      >
+                        <h3 className="text-xl md:text-2xl font-bold tracking-tight dark:text-white group-hover/link:text-[#00FF00] transition-colors decoration-[#00FF00]/50 decoration-2 underline-offset-[6px] group-hover/link:underline leading-tight">
+                          {ach.title}
+                        </h3>
+                        <ExternalLink className="w-5 h-5 text-gray-400 group-hover/link:text-[#00FF00] transition-transform duration-300 opacity-0 group-hover/link:opacity-100 -translate-x-4 group-hover/link:translate-x-0 shrink-0" />
+                      </a>
+                    ) : (
+                      <h3 className="text-xl md:text-2xl font-bold tracking-tight dark:text-white group-hover:text-[#00FF00] transition-colors max-w-lg leading-tight">
+                        {ach.title}
+                      </h3>
+                    )}
+                    <div className="flex flex-wrap items-center gap-3 mt-4 xl:mt-0 xl:justify-end xl:shrink-0">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#00FF00] bg-[#00FF00]/10 px-3 py-1.5 rounded-full whitespace-nowrap">
+                        {ach.role}
+                      </span>
+                      <span className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-white/10 px-3 py-1.5 rounded-full whitespace-nowrap">
+                        {ach.year}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed tracking-tight mt-4">
+                    {ach.description}
+                  </p>
+                  <div className="mt-8 h-[1px] w-full bg-gray-200 dark:bg-white/10 group-last:hidden"></div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none"></div>
         <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-1/3 md:sticky md:top-32">
@@ -269,6 +369,28 @@ export default function AboutPage() {
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed tracking-tight">
                     {edu.description}
                   </p>
+                  {edu.image && (
+                    <div className="mt-8 relative group/img w-full max-w-3xl">
+                      <div className="absolute -inset-3 bg-gradient-to-r from-[#00FF00]/0 via-[#00FF00]/15 to-[#00FF00]/0 rounded-[2rem] blur-xl opacity-0 group-hover/img:opacity-100 transition-all duration-700"></div>
+                      <div className="relative p-2 md:p-3 rounded-[1.5rem] md:rounded-[2rem] bg-white/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 backdrop-blur-md transition-all duration-500 group-hover/img:border-[#00FF00]/30 shadow-lg group-hover/img:shadow-[#00FF00]/5">
+                        <div className="relative w-full aspect-[16/9] rounded-xl md:rounded-[1.5rem] overflow-hidden bg-gray-100 dark:bg-black/40">
+                          <Image 
+                            src={edu.image} 
+                            alt={`${edu.level} graduation`} 
+                            fill
+                            className="object-cover transform group-hover/img:scale-[1.03] transition-transform duration-1000 ease-out"
+                            sizes="(max-width: 1024px) 100vw, 800px"
+                            quality={100}
+                          />
+                        </div>
+                        <div className="absolute top-6 right-6 opacity-0 group-hover/img:opacity-100 transition-all duration-500 hidden sm:flex items-center justify-center translate-y-2 group-hover/img:translate-y-0 shadow-2xl z-10 pointer-events-none">
+                          <div className="bg-black/60 backdrop-blur-md border border-white/20 p-2.5 rounded-full text-[#00FF00]">
+                            <GraduationCap className="w-5 h-5" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -289,17 +411,31 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="relative aspect-[4/5] md:aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-[#00FF00]/10"
+                className="relative aspect-[4/5] md:aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-[#00FF00]/10 group cursor-pointer"
               >
                 <Image 
-                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Design Philosophy" 
+                  src="/philosophy-img.jpg" 
+                  alt="Skincure Capstone Presentation" 
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100"
-                  referrerPolicy="no-referrer"
+                  className="object-cover transition-all duration-[1.5s] scale-100 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#00FF00]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                
+                {/* Interactive overlay on hover */}
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-[0.22,1,0.36,1] z-10 pointer-events-none">
+                  <div className="bg-black/60 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl">
+                    <p className="text-[#00FF00] font-bold text-xs md:text-sm tracking-widest uppercase mb-1">Skincure Capstone</p>
+                    <p className="text-white text-xs opacity-90">Presenting our award-winning thesis to the Davao City Government.</p>
+                  </div>
+                </div>
+                
+                {/* Animated corner borders on hover */}
+                <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-[#00FF00] opacity-0 group-hover:opacity-100 -translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-700 pointer-events-none"></div>
+                <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-[#00FF00] opacity-0 group-hover:opacity-100 translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-700 pointer-events-none"></div>
+                <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-[#00FF00] opacity-0 group-hover:opacity-100 -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-700 pointer-events-none"></div>
+                <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-[#00FF00] opacity-0 group-hover:opacity-100 translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-700 pointer-events-none"></div>
               </motion.div>
             </div>
             
