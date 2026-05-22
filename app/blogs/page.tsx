@@ -13,7 +13,7 @@ import { blogPosts } from '@/lib/blogData';
 
 export default function BlogsPage() {
   return (
-    <main className="min-h-screen flex flex-col pt-[88px] dark:bg-[#050505]">
+    <main className="min-h-screen flex flex-col pt-[88px] dark:bg-[#0A0A0A]">
       <Navbar />
       
       <div className="flex-1">
@@ -22,7 +22,7 @@ export default function BlogsPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
             <ScrollReveal>
               <div className="mb-16">
-                <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
+                <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00] text-black text-xs font-bold mb-6">
                   Knowledge Hub
                 </div>
                 <h1 className="text-5xl md:text-6xl font-medium tracking-[-0.06em] mb-6 dark:text-white">All Articles</h1>
@@ -38,7 +38,7 @@ export default function BlogsPage() {
                   <Link href={`/blogs/${post.slug}`}>
                     <motion.div
                       whileHover={{ y: -8 }}
-                      className="bg-gray-50 dark:bg-[#0a0a0a] border border-gray-100 dark:border-white/5 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group h-full flex flex-col"
+                      className="bg-white dark:bg-[#171717] border border-gray-100 dark:border-white/5 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group h-full flex flex-col"
                     >
                       <div className="relative h-56 w-full overflow-hidden">
                         <Image
@@ -60,7 +60,7 @@ export default function BlogsPage() {
                           <span className="mx-2">•</span>
                           <span>{post.readTime}</span>
                         </div>
-                        <h3 className="text-xl font-medium tracking-[-0.04em] mb-4 group-hover:text-[#00DD00] transition-colors dark:text-white line-clamp-2">
+                        <h3 className="text-xl font-medium tracking-[-0.04em] mb-4 group-hover:text-[#C96A13] transition-colors dark:text-white line-clamp-2">
                           {post.title}
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-[1.4] tracking-[-0.02em] line-clamp-3 flex-1">

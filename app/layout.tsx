@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Preloader />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <SmoothScroll>
-            <div className="min-h-screen bg-white text-black dark:bg-[#050505] dark:text-white transition-colors duration-300">
+            <div className="min-h-screen bg-[#F5F5F2] text-black dark:bg-[#0A0A0A] dark:text-[#F5F5F2] transition-colors duration-300">
               {children}
             </div>
           </SmoothScroll>

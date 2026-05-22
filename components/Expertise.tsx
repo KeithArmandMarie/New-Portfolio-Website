@@ -30,10 +30,10 @@ const services = [
 
 export const Expertise = () => {
   return (
-    <section id="services" className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+    <section id="services" className="relative py-24 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-dots opacity-50 pointer-events-none"></div>
       <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] text-center relative z-10">
-        <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
+        <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00] text-white text-xs font-bold mb-6">
           Services
         </div>
         <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">My Expertise</h2>
@@ -53,12 +53,12 @@ export const Expertise = () => {
               className="group cursor-default"
             >
               <motion.div
-                className="mb-6 p-3 inline-block bg-gray-50 dark:bg-white/5 rounded-lg group-hover:bg-[#00FF00]/20 transition-all duration-300"
+                className="mb-6 p-3 inline-block bg-white dark:bg-[#171717] rounded-lg group-hover:bg-[#FF6B00]/20 transition-all duration-300"
                 whileHover={{ rotate: 5, scale: 1.1 }}
               >
-                <service.icon className="w-6 h-6 group-hover:text-black dark:group-hover:text-white transition-colors" />
+                <service.icon className="w-6 h-6 group-hover:text-[#FF6B00] dark:group-hover:text-[#FF6B00] transition-colors" />
               </motion.div>
-              <h3 className="text-xl font-medium tracking-[-0.06em] mb-4 group-hover:text-[#00DD00] transition-colors dark:text-white">{service.title}</h3>
+              <h3 className="text-xl font-medium tracking-[-0.06em] mb-4 group-hover:text-[#C96A13] transition-colors dark:text-white">{service.title}</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-[1.2] tracking-[-0.04em]">
                 {service.description}
               </p>

@@ -73,11 +73,11 @@ export const RecentWorks = ({ limit }: RecentWorksProps) => {
   const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section id="work" className="relative py-24 bg-gray-50 dark:bg-[#0a0a0a] transition-colors duration-300 overflow-hidden">
+    <section id="work" className="relative py-24 bg-[#F5F5F2] dark:bg-[#171717] transition-colors duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-grid-subtle opacity-50 pointer-events-none"></div>
       <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
+          <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00] text-white text-xs font-bold mb-6">
             Works
           </div>
           <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">Recent Works</h2>
@@ -95,7 +95,7 @@ export const RecentWorks = ({ limit }: RecentWorksProps) => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -12 }}
-              className="bg-white dark:bg-white/5 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group"
+              className="bg-white dark:bg-[#0A0A0A] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group"
             >
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
@@ -110,13 +110,13 @@ export const RecentWorks = ({ limit }: RecentWorksProps) => {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-medium tracking-[-0.06em] mb-4 group-hover:text-[#00DD00] transition-colors dark:text-white">{project.title}</h3>
+                <h3 className="text-2xl font-medium tracking-[-0.06em] mb-4 group-hover:text-[#C96A13] transition-colors dark:text-white">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-[1.2] tracking-[-0.04em]">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="px-3 py-1 bg-gray-100 dark:bg-white/10 rounded-full text-[10px] font-bold uppercase tracking-wider group-hover:bg-[#00FF00]/10 transition-colors dark:text-gray-300">
+                    <span key={i} className="px-3 py-1 bg-gray-100 dark:bg-white/10 rounded-full text-[10px] font-bold uppercase tracking-wider group-hover:bg-[#FF6B00]/10 transition-colors dark:text-gray-300">
                       {tag}
                     </span>
                   ))}

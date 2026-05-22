@@ -19,11 +19,11 @@ export const BlogSection = ({ limit = 3, excludeSlug, title = "Blogs & Articles"
     .slice(0, limit);
 
   return (
-    <section id="blogs" className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden border-t border-gray-100 dark:border-white/5">
+    <section id="blogs" className="relative py-24 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300 overflow-hidden border-t border-gray-100 dark:border-white/5">
       <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none"></div>
       <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
+          <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00] text-black text-xs font-bold mb-6">
             Insights
           </div>
           <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">{title}</h2>
@@ -41,7 +41,7 @@ export const BlogSection = ({ limit = 3, excludeSlug, title = "Blogs & Articles"
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="bg-gray-50 dark:bg-[#0a0a0a] border border-gray-100 dark:border-white/5 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group h-full flex flex-col"
+                className="bg-white dark:bg-[#171717] border border-gray-100 dark:border-white/5 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group h-full flex flex-col"
               >
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image
@@ -63,7 +63,7 @@ export const BlogSection = ({ limit = 3, excludeSlug, title = "Blogs & Articles"
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-medium tracking-[-0.04em] mb-4 group-hover:text-[#00DD00] transition-colors dark:text-white line-clamp-2">
+                  <h3 className="text-xl font-medium tracking-[-0.04em] mb-4 group-hover:text-[#C96A13] transition-colors dark:text-white line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-[1.4] tracking-[-0.02em] line-clamp-3 flex-1">

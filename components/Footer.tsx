@@ -6,7 +6,7 @@ import { Facebook, Linkedin, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="py-12 border-t border-gray-100 dark:border-white/10 dark:bg-[#050505] transition-colors duration-300">
+    <footer className="py-12 border-t border-gray-100 dark:border-white/10 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300">
       <div className="max-w-[1280px] mx-auto px-6 md:px-[120px]">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="mb-8 md:mb-0">

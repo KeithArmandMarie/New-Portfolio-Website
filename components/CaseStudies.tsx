@@ -37,11 +37,11 @@ const caseStudies = [
 
 export const CaseStudies = () => {
   return (
-    <section className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+    <section className="relative py-24 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none"></div>
       <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
         <div className="mb-16">
-          <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
+          <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00] text-black text-xs font-bold mb-6">
             Case Studies
           </div>
           <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] mb-6 dark:text-white">Featured Projects</h2>
@@ -74,7 +74,7 @@ export const CaseStudies = () => {
 
               <div className="w-full lg:w-1/2 space-y-8">
                 <div>
-                  <h3 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest mb-2">{study.subtitle}</h3>
+                  <h3 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest mb-2">{study.subtitle}</h3>
                   <h4 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] dark:text-white mb-6">{study.title}</h4>
                   <p className="text-lg text-gray-600 dark:text-gray-400 leading-[1.4] tracking-[-0.02em]">
                     {study.description}
@@ -103,7 +103,7 @@ export const CaseStudies = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-[#00FF00] text-black px-8 py-3 rounded-full text-sm font-bold hover:bg-[#00DD00] transition-all flex items-center shadow-lg shadow-[#00FF00]/20"
+                      className="bg-[#FF6B00] text-black px-8 py-3 rounded-full text-sm font-bold hover:bg-[#C96A13] hover:text-white transition-all flex items-center shadow-lg shadow-[#FF6B00]/20"
                     >
                       View Case Study
                     </motion.button>

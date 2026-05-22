@@ -74,12 +74,12 @@ export default function CaseStudyPage() {
 
   if (!study) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#050505]">
+      <div className="min-h-screen flex items-center justify-center bg-[#F5F5F2] dark:bg-[#0A0A0A]">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4 dark:text-white">Case Study Not Found</h1>
           <button
             onClick={() => router.push('/work')}
-            className="text-[#00FF00] font-bold flex items-center justify-center mx-auto"
+            className="text-[#FF6B00] font-bold flex items-center justify-center mx-auto"
           >
             <ArrowLeft className="mr-2 w-4 h-4" /> Back to Work
           </button>
@@ -89,7 +89,7 @@ export default function CaseStudyPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#050505] transition-colors duration-300">
+    <main className="min-h-screen bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section */}
@@ -100,7 +100,7 @@ export default function CaseStudyPage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             onClick={() => router.push('/work')}
-            className="flex items-center text-sm font-bold text-gray-500 hover:text-[#00FF00] transition-colors mb-12"
+            className="flex items-center text-sm font-bold text-gray-500 hover:text-[#FF6B00] transition-colors mb-12"
           >
             <ArrowLeft className="mr-2 w-4 h-4" /> Back to Work
           </motion.button>
@@ -156,25 +156,25 @@ export default function CaseStudyPage() {
         <div className="max-w-[1280px] mx-auto md:px-[120px]">
           <div className="grid lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2 space-y-8">
-              <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest">Overview</h2>
+              <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest">Overview</h2>
               <p className="text-2xl text-gray-800 dark:text-gray-200 leading-[1.4] tracking-tight">
                 {study.overview}
               </p>
             </div>
             <div className="space-y-8">
               <div>
-                <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest mb-4">My Role</h2>
+                <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest mb-4">My Role</h2>
                 <p className="text-lg font-medium dark:text-white mb-4">{study.role.title}</p>
                 <ul className="space-y-2">
                   {study.role.responsibilities.map((resp, i) => (
                     <li key={i} className="text-gray-600 dark:text-gray-400 text-sm flex items-center gap-2">
-                      <div className="w-1 h-1 bg-[#00FF00] rounded-full"></div>
+                      <div className="w-1 h-1 bg-[#FF6B00] rounded-full"></div>
                       {resp}
                     </li>
                   ))}
                 </ul>
               </div>
-              <Link href={study.link} target="_blank" className="inline-flex items-center gap-2 text-[#00FF00] font-bold group">
+              <Link href={study.link} target="_blank" className="inline-flex items-center gap-2 text-[#FF6B00] font-bold group">
                 Visit Live Site <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
             </div>
@@ -187,18 +187,18 @@ export default function CaseStudyPage() {
         <div className="max-w-[1280px] mx-auto md:px-[120px]">
           <div className="grid lg:grid-cols-2 gap-24 items-start">
             <div className="space-y-8">
-              <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest">The Problem</h2>
+              <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest">The Problem</h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 leading-[1.6]">
                 {study.problem}
               </p>
             </div>
             <div className="space-y-8">
-              <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest">Research & Insights</h2>
+              <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest">Research & Insights</h2>
               <p className="text-lg text-gray-800 dark:text-gray-200 mb-6">{study.insights.intro}</p>
               <ul className="space-y-4">
                 {study.insights.points.map((point, i) => (
                   <li key={i} className="flex gap-4 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-[#00FF00] shrink-0 mt-1" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FF6B00] shrink-0 mt-1" />
                     <span className="text-gray-600 dark:text-gray-400">{point}</span>
                   </li>
                 ))}
@@ -210,15 +210,15 @@ export default function CaseStudyPage() {
         <div className="max-w-[1280px] mx-auto md:px-[120px]">
           <div className="grid lg:grid-cols-3 gap-16">
             <div className="space-y-6">
-              <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest">UX Strategy</h2>
+              <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest">UX Strategy</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-[1.6]">{study.strategy}</p>
             </div>
             <div className="space-y-6">
-              <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest">Design Approach</h2>
+              <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest">Design Approach</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-[1.6]">{study.design}</p>
             </div>
             <div className="space-y-6">
-              <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest">Development</h2>
+              <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest">Development</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-[1.6]">{study.development}</p>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function CaseStudyPage() {
 
         <div className="max-w-[1280px] mx-auto md:px-[120px] pt-16 border-t border-gray-100 dark:border-white/10">
           <div className="max-w-3xl">
-            <h2 className="text-sm font-bold text-[#00FF00] uppercase tracking-widest mb-8">The Outcome</h2>
+            <h2 className="text-sm font-bold text-[#FF6B00] uppercase tracking-widest mb-8">The Outcome</h2>
             <p className="text-3xl md:text-4xl font-medium tracking-tight dark:text-white leading-[1.3]">
               {study.outcome}
             </p>

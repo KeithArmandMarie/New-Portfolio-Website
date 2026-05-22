@@ -68,7 +68,7 @@ export const Navbar = () => {
             <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter group flex items-center">
               <motion.span 
                 whileHover={{ rotate: [0, -10, 10, 0] }}
-                className="inline-block mr-2 text-[#00FF00]"
+                className="inline-block mr-2 text-[#FF6B00]"
               >
                 ✦
               </motion.span>
@@ -94,7 +94,7 @@ export const Navbar = () => {
                     {item}
                   </span>
                   <motion.span 
-                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00FF00] transition-all duration-300 group-hover:w-full"
+                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6B00] transition-all duration-300 group-hover:w-full"
                     layoutId="navUnderline"
                   />
                 </Link>

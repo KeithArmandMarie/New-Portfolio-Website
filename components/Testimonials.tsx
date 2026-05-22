@@ -36,17 +36,17 @@ export const Testimonials = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="relative py-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+    <section className="relative py-24 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-dots opacity-50 pointer-events-none"></div>
       
       <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10 mb-16">
-        <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] text-center dark:text-white">Testimonials</h2>
+        <h2 className="text-4xl md:text-5xl font-medium tracking-[-0.06em] text-center dark:text-[#F5F5F2]">Testimonials</h2>
       </div>
 
       <div className="relative">
         {/* Fade Effect Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white dark:from-[#050505] to-transparent z-30 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white dark:from-[#050505] to-transparent z-30 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F5F5F2] dark:from-[#0A0A0A] to-transparent z-30 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F5F5F2] dark:from-[#0A0A0A] to-transparent z-30 pointer-events-none"></div>
 
         <div className="flex overflow-hidden group">
           <div 
@@ -59,11 +59,11 @@ export const Testimonials = () => {
             {duplicatedTestimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex flex-col min-w-[350px] md:min-w-[450px] bg-gray-50/50 dark:bg-white/5 p-8 rounded-2xl border border-gray-100 dark:border-white/10"
+                className="flex flex-col min-w-[350px] md:min-w-[450px] bg-white dark:bg-[#171717] p-8 rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm"
               >
                 <div className="flex mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-black text-black dark:fill-white dark:text-white" />
+                    <Star key={i} className="w-4 h-4 fill-[#FF6B00] text-[#FF6B00]" />
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-8 flex-grow leading-[1.4] tracking-[-0.02em]">
@@ -71,7 +71,7 @@ export const Testimonials = () => {
                 </p>
                 <div className="flex items-center">
                   <div>
-                    <h4 className="font-medium tracking-[-0.06em] text-sm dark:text-white">{testimonial.author}</h4>
+                    <h4 className="font-medium tracking-[-0.06em] text-sm dark:text-[#F5F5F2]">{testimonial.author}</h4>
                     <p className="text-gray-500 text-xs dark:text-gray-400">{testimonial.role}</p>
                   </div>
                 </div>

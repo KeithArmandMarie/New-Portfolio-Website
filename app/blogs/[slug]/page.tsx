@@ -25,7 +25,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <main className="min-h-screen flex flex-col pt-[88px] dark:bg-[#050505]">
+    <main className="min-h-screen flex flex-col pt-[88px] dark:bg-[#0A0A0A]">
       <Navbar />
       
       <article className="flex-1 w-full pb-24">
@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </Link>
               
               <div className="mb-6">
-                <span className="px-3 py-1 bg-[#00FF00]/20 text-[#00FF00] border border-[#00FF00]/50 rounded-full text-xs font-bold uppercase tracking-wider">
+                <span className="px-3 py-1 bg-[#FF6B00]/20 text-[#FF6B00] border border-[#FF6B00]/30 rounded-full text-xs font-bold uppercase tracking-wider">
                   {post.category}
                 </span>
               </div>
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {/* Content Area */}
         <section className="max-w-[800px] mx-auto w-full px-6 md:px-12 pt-16">
           <div 
-            className="prose prose-lg dark:prose-invert prose-headings:font-medium prose-headings:tracking-[-0.04em] prose-a:text-[#00DD00] prose-a:no-underline hover:prose-a:underline max-w-none text-gray-700 dark:text-gray-300"
+            className="prose prose-lg dark:prose-invert prose-headings:font-medium prose-headings:tracking-[-0.04em] prose-a:text-[#FF6B00] prose-a:no-underline hover:prose-a:underline max-w-none text-gray-700 dark:text-gray-300"
             dangerouslySetInnerHTML={{ __html: `<div class="article-content">${post.content}</div>` }}
           />
           

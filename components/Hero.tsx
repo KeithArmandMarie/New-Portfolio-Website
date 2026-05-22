@@ -30,16 +30,16 @@ export const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 px-4 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300 overflow-hidden">
         {/* Noise Overlay */}
         <div className="absolute inset-0 bg-noise opacity-[0.03] dark:opacity-[0.05] pointer-events-none"></div>
 
         {/* Bottom Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white dark:from-[#050505] to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F5F5F2] dark:from-[#0A0A0A] to-transparent z-10"></div>
 
         {/* Atmospheric Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#00FF00]/5 dark:bg-[#00FF00]/10 blur-[120px] rounded-full opacity-50 dark:opacity-30 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#00FF00]/5 dark:bg-[#00FF00]/5 blur-[100px] rounded-full opacity-30 translate-x-1/4 translate-y-1/4"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B00]/5 dark:bg-[#FF6B00]/10 blur-[120px] rounded-full opacity-50 dark:opacity-30 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FF6B00]/5 dark:bg-[#FF6B00]/5 blur-[100px] rounded-full opacity-30 translate-x-1/4 translate-y-1/4"></div>
 
         {/* Abstract Graphics */}
         <motion.div
@@ -59,7 +59,7 @@ export const Hero = () => {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute top-[20%] left-[10%] w-64 h-64 border border-[#00FF00]/20 dark:border-[#00FF00]/10 rounded-full"
+            className="absolute top-[20%] left-[10%] w-64 h-64 border border-[#FF6B00]/20 dark:border-[#FF6B00]/10 rounded-full"
           />
 
           {/* Floating Circle 2 */}
@@ -73,23 +73,23 @@ export const Hero = () => {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute bottom-[10%] right-[15%] w-96 h-96 border border-[#00FF00]/10 dark:border-[#00FF00]/5 rounded-full"
+            className="absolute bottom-[10%] right-[15%] w-96 h-96 border border-[#FF6B00]/10 dark:border-[#FF6B00]/5 rounded-full"
           />
 
           {/* Abstract Lines */}
-          <div className="absolute top-[40%] right-[5%] w-32 h-[1px] bg-gradient-to-r from-transparent via-[#00FF00]/30 to-transparent rotate-45" />
-          <div className="absolute top-[45%] right-[7%] w-32 h-[1px] bg-gradient-to-r from-transparent via-[#00FF00]/20 to-transparent rotate-45" />
+          <div className="absolute top-[40%] right-[5%] w-32 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/30 to-transparent rotate-45" />
+          <div className="absolute top-[45%] right-[7%] w-32 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/20 to-transparent rotate-45" />
 
-          <div className="absolute bottom-[30%] left-[5%] w-48 h-[1px] bg-gradient-to-r from-transparent via-[#00FF00]/20 to-transparent -rotate-12" />
+          <div className="absolute bottom-[30%] left-[5%] w-48 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/20 to-transparent -rotate-12" />
 
           {/* Small Dots */}
-          <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-[#00FF00]/40 rounded-full" />
-          <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-[#00FF00]/30 rounded-full" />
-          <div className="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#00FF00]/20 rounded-full" />
+          <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-[#FF6B00]/40 rounded-full" />
+          <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-[#FF6B00]/30 rounded-full" />
+          <div className="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#FF6B00]/20 rounded-full" />
 
           {/* Plus Signs */}
-          <div className="absolute top-[15%] right-[20%] text-[#00FF00]/20 dark:text-[#00FF00]/10 font-light text-2xl select-none">+</div>
-          <div className="absolute bottom-[25%] left-[15%] text-[#00FF00]/20 dark:text-[#00FF00]/10 font-light text-2xl select-none">+</div>
+          <div className="absolute top-[15%] right-[20%] text-[#FF6B00]/20 dark:text-[#FF6B00]/10 font-light text-2xl select-none">+</div>
+          <div className="absolute bottom-[25%] left-[15%] text-[#FF6B00]/20 dark:text-[#FF6B00]/10 font-light text-2xl select-none">+</div>
 
           {/* Floating Square */}
           <motion.div
@@ -102,7 +102,7 @@ export const Hero = () => {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute top-[60%] left-[8%] w-12 h-12 border border-[#00FF00]/20 dark:border-[#00FF00]/10 rounded-lg rotate-45"
+            className="absolute top-[60%] left-[8%] w-12 h-12 border border-[#FF6B00]/20 dark:border-[#FF6B00]/10 rounded-lg rotate-45"
           />
         </motion.div>
       </div>
@@ -115,9 +115,9 @@ export const Hero = () => {
       >
         <motion.div
           variants={itemVariants}
-          className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#00FF00] text-black text-xs font-semibold mb-8 shadow-[0_0_20px_rgba(0,255,0,0.3)]"
+          className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#FF6B00] text-white text-xs font-semibold mb-8 shadow-[0_0_20px_rgba(255,107,0,0.3)]"
         >
-          <span className="w-2 h-2 bg-black rounded-full mr-2 animate-pulse"></span>
+          <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
           Keith Caballero Online Portfolio
         </motion.div>
 

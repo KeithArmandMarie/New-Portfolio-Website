@@ -95,7 +95,7 @@ export const BentoProfile = () => {
   if (!mounted) return null;
 
   return (
-    <section className="py-32 bg-white dark:bg-[#050505] transition-colors duration-700 overflow-hidden">
+    <section className="py-32 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-700 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Editorial Header */}
         <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
@@ -124,7 +124,7 @@ export const BentoProfile = () => {
           {/* Spotify Card - Immersive Glass Player */}
           <motion.div 
             whileHover={{ y: -8 }}
-            className="md:col-span-2 md:row-span-1 bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-100 dark:border-white/5 rounded-[3rem] p-10 flex flex-col justify-between relative overflow-hidden group"
+            className="md:col-span-2 md:row-span-1 bg-[#F5F5F2] dark:bg-[#171717] border border-zinc-100 dark:border-white/5 rounded-[3rem] p-10 flex flex-col justify-between relative overflow-hidden group"
           >
             {/* Dynamic Background Blur */}
             <div className="absolute inset-0 opacity-30 dark:opacity-50 grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100">
@@ -204,7 +204,7 @@ export const BentoProfile = () => {
           {/* Birthday Card - Life Progress */}
           <motion.div 
             whileHover={{ y: -8 }}
-            className="md:col-span-1 md:row-span-1 bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-100 dark:border-white/5 rounded-[3rem] p-10 flex flex-col justify-between group relative overflow-hidden"
+            className="md:col-span-1 md:row-span-1 bg-[#F5F5F2] dark:bg-[#171717] border border-zinc-100 dark:border-white/5 rounded-[3rem] p-10 flex flex-col justify-between group relative overflow-hidden"
           >
             <div className="flex justify-between items-start relative z-10">
               <div className="p-4 bg-zinc-100 dark:bg-white/5 rounded-3xl group-hover:bg-pink-500/20 transition-all duration-500">
@@ -256,7 +256,7 @@ export const BentoProfile = () => {
           >
             <div className="absolute top-8 left-8 z-10">
               <div className="p-5 bg-white/60 dark:bg-black/40 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/5">
-                <MapPin className="w-6 h-6 text-[#00FF00]" />
+                <MapPin className="w-6 h-6 text-[#FF6B00]" />
               </div>
             </div>
 
@@ -264,7 +264,7 @@ export const BentoProfile = () => {
               href="https://maps.apple.com/?q=Davao+City+Philippines" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="absolute top-8 right-8 z-10 p-5 bg-white/60 dark:bg-black/40 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/5 hover:text-[#00FF00] transition-all hover:scale-110"
+              className="absolute top-8 right-8 z-10 p-5 bg-white/60 dark:bg-black/40 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/20 dark:border-white/5 hover:text-[#FF6B00] transition-all hover:scale-110"
             >
               <ExternalLink className="w-5 h-5" />
             </a>
@@ -279,8 +279,8 @@ export const BentoProfile = () => {
               <div className="absolute bottom-10 left-10 right-10 pointer-events-none">
                 <div className="bg-black/80 backdrop-blur-2xl p-8 rounded-[2.5rem] border border-white/10 shadow-2xl transform group-hover:translate-y-[-10px] transition-all duration-700">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="w-2 h-2 bg-[#00FF00] rounded-full animate-pulse shadow-[0_0_10px_#00FF00]"></span>
-                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[#00FF00]">Active Station</p>
+                    <span className="w-2 h-2 bg-[#FF6B00] rounded-full animate-pulse shadow-[0_0_10px_#FF6B00]"></span>
+                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FF6B00]">Active Station</p>
                   </div>
                   <h3 className="text-3xl font-bold text-white leading-none tracking-tighter">Davao City, PH</h3>
                   <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest mt-4">7.06° N, 125.61° E</p>
@@ -292,40 +292,40 @@ export const BentoProfile = () => {
           {/* Hobbies Card - Typographic Lifestyle */}
           <motion.div 
             whileHover={{ y: -8 }}
-            className="md:col-span-2 md:row-span-1 bg-zinc-900 border border-white/5 rounded-[3rem] p-10 flex flex-col justify-center relative overflow-hidden group"
+            className="md:col-span-2 md:row-span-1 bg-[#171717] border border-white/5 rounded-[3rem] p-10 flex flex-col justify-center relative overflow-hidden group"
           >
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-[2px] bg-[#00FF00]"></div>
+                <div className="w-12 h-[2px] bg-[#FF6B00]"></div>
                 <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.4em]">Interests</span>
               </div>
               <h3 className="text-5xl font-bold text-white leading-[0.85] tracking-[-0.06em] mb-10 uppercase">
-                Beyond <br /><span className="text-[#00FF00]">The Code.</span>
+                Beyond <br /><span className="text-[#FF6B00]">The Code.</span>
               </h3>
               
               <div className="flex flex-wrap gap-3">
                 {['GYM', 'HIKING', 'BADMINTON', 'VOLLEYBALL', 'RUNNING'].map(hobby => (
-                  <div key={hobby} className="px-5 py-2.5 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black text-white uppercase tracking-[0.2em] hover:bg-[#00FF00] hover:text-black transition-all duration-500 cursor-default">
+                  <div key={hobby} className="px-5 py-2.5 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black text-white uppercase tracking-[0.2em] hover:bg-[#FF6B00] hover:text-black transition-all duration-500 cursor-default">
                     {hobby}
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="absolute right-[-10%] bottom-[-20%] w-96 h-96 bg-[#00FF00]/5 rounded-full blur-[120px] group-hover:bg-[#00FF00]/10 transition-colors duration-1000"></div>
+            <div className="absolute right-[-10%] bottom-[-20%] w-96 h-96 bg-[#FF6B00]/5 rounded-full blur-[120px] group-hover:bg-[#FF6B00]/10 transition-colors duration-1000"></div>
             
-            <Heart className="absolute top-10 right-10 w-16 h-16 text-white/5 group-hover:text-[#00FF00]/10 transition-all duration-700 group-hover:scale-110" />
+            <Heart className="absolute top-10 right-10 w-16 h-16 text-white/5 group-hover:text-[#FF6B00]/10 transition-all duration-700 group-hover:scale-110" />
           </motion.div>
 
           {/* Contact/Stat Card - Premium Widget */}
           <motion.div 
             whileHover={{ y: -8 }}
-            className="md:col-span-1 md:row-span-1 bg-white dark:bg-zinc-900/30 border border-zinc-100 dark:border-white/5 rounded-[3rem] p-10 flex flex-col justify-center items-center text-center group relative overflow-hidden"
+            className="md:col-span-1 md:row-span-1 bg-[#F5F5F2] dark:bg-[#171717] border border-zinc-100 dark:border-white/5 rounded-[3rem] p-10 flex flex-col justify-center items-center text-center group relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-full h-2 bg-[#00FF00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+            <div className="absolute top-0 left-0 w-full h-2 bg-[#FF6B00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
             
             <div className="relative z-10">
-              <div className="text-8xl font-bold dark:text-white tracking-[-0.08em] mb-2 group-hover:text-[#00FF00] transition-colors duration-700">100%</div>
+              <div className="text-8xl font-bold dark:text-white tracking-[-0.08em] mb-2 group-hover:text-[#FF6B00] transition-colors duration-700">100%</div>
               <p className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.4em] mb-10">Commitment</p>
               
               <a 

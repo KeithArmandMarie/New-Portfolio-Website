@@ -78,12 +78,12 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00] text-black text-xs font-bold mb-6">
+              <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00] text-black text-xs font-bold mb-6">
                 Services
               </div>
               <h1 className="text-6xl md:text-8xl font-medium tracking-[-0.06em] leading-[0.9] mb-8 dark:text-white">
                 What I <br />
-                <span className="text-[#00FF00]">Offer.</span>
+                <span className="text-[#FF6B00]">Offer.</span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-[1.2] tracking-[-0.04em]">
                 Comprehensive design and development solutions tailored to your business needs.
@@ -95,19 +95,19 @@ export default function ServicesPage() {
 
       {/* Services List Section (Compact Layout) */}
       <ScrollReveal>
-        <section className="relative pb-24 bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
+        <section className="relative pb-24 bg-[#F5F5F2] dark:bg-[#0A0A0A] transition-colors duration-300 overflow-hidden">
           <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
               {allServices.map((service, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-2xl bg-gray-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-[#00FF00]/50 hover:bg-[#00FF00]/5 transition-all duration-300 group"
+                  className="p-6 rounded-2xl bg-white dark:bg-[#171717] border border-black/5 dark:border-white/10 hover:border-[#FF6B00]/50 hover:bg-[#FF6B00]/5 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-white dark:bg-black rounded-xl shadow-sm group-hover:bg-[#00FF00]/10 transition-colors">
-                      <service.icon className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-[#00DD00] transition-colors" strokeWidth={2} />
+                    <div className="p-3 bg-white dark:bg-black rounded-xl shadow-sm group-hover:bg-[#FF6B00]/10 transition-colors">
+                      <service.icon className="w-5 h-5 text-zinc-800 dark:text-zinc-200 group-hover:text-[#C96A13] transition-colors" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium tracking-[-0.04em] dark:text-white group-hover:text-[#00DD00] transition-colors">
+                    <h3 className="text-xl font-medium tracking-[-0.04em] dark:text-white group-hover:text-[#C96A13] transition-colors">
                       {service.title}
                     </h3>
                   </div>
@@ -128,11 +128,11 @@ export default function ServicesPage() {
 
       {/* Process Section */}
       <ScrollReveal>
-        <section className="relative py-24 bg-gray-50 dark:bg-[#0a0a0a] transition-colors duration-300">
+        <section className="relative py-24 bg-[#F5F5F2] dark:bg-[#171717] transition-colors duration-300">
           <div className="absolute inset-0 bg-dots opacity-50 pointer-events-none"></div>
           <div className="max-w-[1280px] mx-auto px-6 md:px-[120px] relative z-10">
             <div className="text-center mb-20">
-              <div className="inline-block px-4 py-1 rounded-full bg-[#00FF00]/10 text-[#00DD00] border border-[#00FF00]/20 text-xs font-bold mb-6 uppercase tracking-widest">
+              <div className="inline-block px-4 py-1 rounded-full bg-[#FF6B00]/10 text-[#C96A13] border border-[#FF6B00]/20 text-xs font-bold mb-6 uppercase tracking-widest">
                 Workflow
               </div>
               <h2 className="text-5xl md:text-6xl font-medium tracking-[-0.06em] dark:text-white">
@@ -142,7 +142,7 @@ export default function ServicesPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
               {/* Connecting Line */}
-              <div className="hidden md:block absolute top-[48px] left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-[#00FF00]/30 to-transparent"></div>
+              <div className="hidden md:block absolute top-[48px] left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/30 to-transparent"></div>
               
               {[
                 {
@@ -162,10 +162,10 @@ export default function ServicesPage() {
                 }
               ].map((process, idx) => (
                 <div key={idx} className="relative z-10 flex flex-col items-center text-center group">
-                  <div className="w-24 h-24 mb-8 rounded-[2rem] bg-white dark:bg-black border border-gray-100 dark:border-white/10 flex items-center justify-center text-2xl font-black text-gray-300 dark:text-gray-700 group-hover:text-[#00FF00] group-hover:border-[#00FF00]/50 group-hover:-rotate-6 transition-all shadow-sm">
+                  <div className="w-24 h-24 mb-8 rounded-[2rem] bg-white dark:bg-black border border-gray-100 dark:border-white/10 flex items-center justify-center text-2xl font-black text-gray-300 dark:text-gray-700 group-hover:text-[#FF6B00] group-hover:border-[#FF6B00]/50 group-hover:-rotate-6 transition-all shadow-sm">
                     {process.step}
                   </div>
-                  <h3 className="text-2xl font-medium tracking-[-0.04em] mb-4 dark:text-white group-hover:text-[#00DD00] transition-colors">
+                  <h3 className="text-2xl font-medium tracking-[-0.04em] mb-4 dark:text-white group-hover:text-[#C96A13] transition-colors">
                     {process.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-[1.6]">

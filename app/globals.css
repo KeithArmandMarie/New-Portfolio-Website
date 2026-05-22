@@ -5,8 +5,15 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-dark-bg: #050505;
+  --color-dark-bg: #0A0A0A;
   --font-sans: var(--font-sans);
+  
+  --color-luxury-bg: #0A0A0A;
+  --color-luxury-surface: #171717;
+  --color-luxury-text: #F5F5F2;
+  --color-luxury-accent: #FF6B00;
+  --color-luxury-support: #C96A13;
+  --color-luxury-muted: #A3A3A3;
 }
 
 @layer base {
@@ -35,7 +42,7 @@
   }
   
   body {
-    @apply antialiased bg-white text-black dark:bg-[#050505] dark:text-white transition-colors duration-500;
+    @apply antialiased bg-[#F5F5F2] text-black dark:bg-[#0A0A0A] dark:text-[#F5F5F2] transition-colors duration-500;
     font-family: var(--font-sans), system-ui, sans-serif;
   }
 
