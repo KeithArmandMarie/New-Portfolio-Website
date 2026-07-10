@@ -10,12 +10,13 @@ import {
   Briefcase, GraduationCap, Code2, Trophy, ExternalLink,
   Layout, SquareDashed, Layers, Palette, Fingerprint, PencilRuler,
   Monitor, Paintbrush, Wrench, Share2,
-  Search, PenLine, Users, Network, Clapperboard
+  Search, PenLine, Users, Network, Clapperboard, Bot
 } from 'lucide-react';
 import { 
   SiFramer, SiTailwindcss, SiReact, SiElementor, SiWordpress, 
   SiFigma, SiGit, SiGithub,
-  SiCanva, SiClaude, SiOpenai, SiGooglegemini
+  SiCanva, SiClaude, SiOpenai, SiGooglegemini,
+  SiHubspot, SiGoogleanalytics, SiGoogletagmanager, SiBricks
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { DiPhotoshop, DiIllustrator } from 'react-icons/di';
@@ -116,7 +117,6 @@ const skills = [
       { name: 'Prototyping', icon: <Layers className="w-3.5 h-3.5" /> }, 
       { name: 'Graphic Design', icon: <Palette className="w-3.5 h-3.5" /> }, 
       { name: 'Brand Identity', icon: <Fingerprint className="w-3.5 h-3.5" /> }, 
-      { name: 'Framer', icon: <SiFramer className="w-3.5 h-3.5" /> }, 
       { name: 'Balsamiq', icon: <PencilRuler className="w-3.5 h-3.5" /> }
     ] 
   },
@@ -128,6 +128,7 @@ const skills = [
       { name: 'WordPress', icon: <SiWordpress className="w-3.5 h-3.5" /> }, 
       { name: 'WP Theme Customization', icon: <Paintbrush className="w-3.5 h-3.5" /> }, 
       { name: 'Avada Builder', icon: <Wrench className="w-3.5 h-3.5" /> }, 
+      { name: 'Bricks Builder', icon: <SiBricks className="w-3.5 h-3.5" /> }, 
       { name: 'React', icon: <SiReact className="w-3.5 h-3.5" /> }, 
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-3.5 h-3.5" /> }, 
       { name: 'Elementor', icon: <SiElementor className="w-3.5 h-3.5" /> }
@@ -138,14 +139,19 @@ const skills = [
     bentoClass: 'md:col-span-3',
     items: [
       { name: 'Figma', icon: <SiFigma className="w-3.5 h-3.5" /> }, 
+      { name: 'Framer', icon: <SiFramer className="w-3.5 h-3.5" /> },
       { name: 'Adobe Photoshop', icon: <DiPhotoshop className="w-3.5 h-3.5" /> }, 
       { name: 'Adobe Illustrator', icon: <DiIllustrator className="w-3.5 h-3.5" /> }, 
       { name: 'VS Code', icon: <VscVscode className="w-3.5 h-3.5" /> }, 
       { name: 'Git', icon: <SiGit className="w-3.5 h-3.5" /> }, 
       { name: 'Github', icon: <SiGithub className="w-3.5 h-3.5" /> },
+      { name: 'HubSpot', icon: <SiHubspot className="w-3.5 h-3.5" /> },
       { name: 'Socialpilot', icon: <Share2 className="w-3.5 h-3.5" /> },
       { name: 'Canva', icon: <SiCanva className="w-3.5 h-3.5" /> },
       { name: 'Capcut', icon: <Clapperboard className="w-3.5 h-3.5" /> },
+      { name: 'Google Analytics', icon: <SiGoogleanalytics className="w-3.5 h-3.5" /> },
+      { name: 'Google Tag Manager', icon: <SiGoogletagmanager className="w-3.5 h-3.5" /> },
+      { name: 'AI Automation', icon: <Bot className="w-3.5 h-3.5" /> },
       { name: 'Claude AI', icon: <SiClaude className="w-3.5 h-3.5" /> },
       { name: 'ChatGPT', icon: <SiOpenai className="w-3.5 h-3.5" /> },
       { name: 'Google Anti Gravity', icon: <SiGooglegemini className="w-3.5 h-3.5" /> }

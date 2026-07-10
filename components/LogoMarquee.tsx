@@ -10,6 +10,7 @@ export const LogoMarquee = () => {
     { name: 'Linked VA', icon: 'LVA' },
     { name: 'ELEV8 Consulting', icon: 'E8' },
     { name: 'ELEV8 Wellness', icon: 'EW' },
+    { name: 'Butler Manufacturing', icon: 'BM' },
   ];
 
   return (
