@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
 import { 
-  Briefcase, GraduationCap, Code2, Trophy, ExternalLink,
+  Briefcase, GraduationCap, Download, Code2, Trophy, ExternalLink,
   Layout, SquareDashed, Layers, Palette, Fingerprint, PencilRuler,
   Monitor, Paintbrush, Wrench, Share2,
   Search, PenLine, Users, Network, Clapperboard, Bot
@@ -21,6 +21,7 @@ import {
 import { VscVscode } from 'react-icons/vsc';
 import { DiPhotoshop, DiIllustrator } from 'react-icons/di';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BentoProfile } from '@/components/BentoProfile';
 
 const experiences = [
@@ -190,9 +191,24 @@ export default function AboutPage() {
               Designing with <br />
               <span className="text-[#FF6B00]">Purpose & Precision.</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-[1.2] tracking-[-0.04em]">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-[1.2] tracking-[-0.04em] mb-8">
               I am Keith Caballero, a UI/UX Designer and Web Developer dedicated to creating digital experiences that are not only visually stunning but also highly functional and user-centric.
             </p>
+            <Link
+              href="https://drive.google.com/drive/u/2/folders/1vQ5c-UjkvYq4-cwUYfO7MPSHaDdirl8v"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2.5 bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-8 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm"
+              >
+                <Download className="w-4 h-4 text-[#FF6B00]" />
+                Download Resume
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -206,9 +222,18 @@ export default function AboutPage() {
               <h2 className="text-4xl font-medium tracking-[-0.06em] dark:text-white flex items-center gap-3 uppercase">
                 <Briefcase className="text-[#FF6B00]" /> Experience
               </h2>
-              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 max-w-xs">
+              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 max-w-xs mb-6">
                 My professional journey through design, development, and technical support.
               </p>
+              <Link
+                href="https://drive.google.com/drive/u/2/folders/1vQ5c-UjkvYq4-cwUYfO7MPSHaDdirl8v"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#FF6B00] hover:text-[#C96A13] transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" />
+                Download Resume
+              </Link>
             </div>
             <div className="md:w-2/3 space-y-12">
               {experiences.map((exp, index) => (

@@ -123,31 +123,40 @@ export const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-medium tracking-[-0.06em] mb-8 leading-[0.8] dark:text-white"
+          className="text-5xl md:text-7xl font-medium tracking-[-0.06em] mb-8 leading-[0.95] dark:text-white"
         >
-          Websites For Service <br /> Based Businesses
+          Websites that turn <br className="hidden sm:inline" />
+          visitors into enquiries.
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-[1.2] tracking-[-0.04em]"
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-[1.3] tracking-[-0.03em]"
         >
-          I&apos;m Keith Caballero, a UI UX Designer and Website Developer helping service based businesses build clear, high performing websites
+          Keith Caballero. Considered design, precise development, and the SEO and marketing that make it perform. One person, start to finish.
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link
-            href="https://drive.google.com/drive/u/2/folders/1vQ5c-UjkvYq4-cwUYfO7MPSHaDdirl8v"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm">
-              Download Resume
-            </button>
+          <Link href="#work" className="w-full sm:w-auto">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto bg-[#FF6B00] text-white px-10 py-4 rounded-xl text-sm font-medium hover:bg-[#C96A13] transition-all shadow-lg shadow-[#FF6B00]/20"
+            >
+              View my work
+            </motion.button>
+          </Link>
+          <Link href="https://calendly.com/caballerokeith2/30min" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-10 py-4 rounded-xl text-sm font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all shadow-sm"
+            >
+              Book a call
+            </motion.button>
           </Link>
         </motion.div>
       </motion.div>

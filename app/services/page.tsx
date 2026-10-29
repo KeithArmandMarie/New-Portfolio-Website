@@ -8,7 +8,7 @@ import { ScrollToTop } from '@/components/ScrollToTop';
 import { ContactCTA } from '@/components/ContactCTA';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { LogoMarquee } from '@/components/LogoMarquee';
-import { Layout, Monitor, Code, Target, RefreshCcw, Palette, Search, Wrench, Framer, Headset } from 'lucide-react';
+import { Layout, Monitor, Code, Target, RefreshCcw, Palette, Search, Wrench, Framer, Headset, Users, BarChart3 } from 'lucide-react';
 
 const allServices = [
   {
@@ -27,6 +27,21 @@ const allServices = [
     icon: Framer,
   },
   {
+    title: 'Custom Development',
+    description: 'I build bespoke, hand-coded websites in HTML, CSS, and JavaScript—clean, lightweight, and tailored to your exact specifications.',
+    icon: Monitor,
+  },
+  {
+    title: 'CRM and Lead Capture',
+    description: 'I connect your forms to HubSpot so every enquiry lands in the right place and gets followed up.',
+    icon: Users,
+  },
+  {
+    title: 'Analytics and SEO',
+    description: 'I set up tracking, schema, and on page SEO so you can see what brings in leads and get found on Google.',
+    icon: BarChart3,
+  },
+  {
     title: 'Website Strategy',
     description: 'I architect data-informed website strategies that align structure, messaging, and user journey—ensuring every touchpoint contributes to measurable business outcomes.',
     icon: Target,
@@ -37,19 +52,9 @@ const allServices = [
     icon: RefreshCcw,
   },
   {
-    title: 'Website Development',
-    description: 'I build high-performance, fully responsive websites with precision and attention to detail, ensuring a seamless and elevated experience across all devices.',
-    icon: Monitor,
-  },
-  {
     title: 'Graphic Design',
     description: 'I design visually sophisticated assets that reinforce brand identity, communicate value with clarity, and create a lasting impression.',
     icon: Palette,
-  },
-  {
-    title: 'SEO Setup and Optimization',
-    description: 'I implement strategic SEO foundations and on-page optimization designed to enhance visibility, improve search rankings, and support sustainable growth.',
-    icon: Search,
   },
   {
     title: 'Ongoing Website Support',

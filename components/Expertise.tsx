@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Layout, Monitor, Code, Framer } from 'lucide-react';
+import { Layout, Monitor, Code, Framer, Users, BarChart3 } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const services = [
@@ -22,9 +22,19 @@ const services = [
     icon: Framer,
   },
   {
-    title: 'Website Development',
-    description: 'I build high-performance, fully responsive websites with precision and attention to detail, ensuring a seamless and elevated experience across all devices.',
+    title: 'Custom Development',
+    description: 'I build bespoke, high-performance websites coded from scratch in HTML, CSS, and JavaScript—clean, lightweight, and tailored to your exact specifications.',
     icon: Monitor,
+  },
+  {
+    title: 'CRM and Lead Capture',
+    description: 'I connect your forms to HubSpot so every enquiry lands in the right place and gets followed up.',
+    icon: Users,
+  },
+  {
+    title: 'Analytics and SEO',
+    description: 'I set up tracking, schema, and on page SEO so you can see what brings in leads and get found on Google.',
+    icon: BarChart3,
   },
 ];
 
@@ -41,7 +51,7 @@ export const Expertise = () => {
           I design and develop websites that work as hard as you do. <br />No unnecessary features. No wasted space.<br />
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 text-left">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -59,7 +69,7 @@ export const Expertise = () => {
                 <service.icon className="w-6 h-6 group-hover:text-[#FF6B00] dark:group-hover:text-[#FF6B00] transition-colors" />
               </motion.div>
               <h3 className="text-xl font-medium tracking-[-0.06em] mb-4 group-hover:text-[#C96A13] transition-colors dark:text-white">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-[1.2] tracking-[-0.04em]">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-[1.4] tracking-[-0.02em]">
                 {service.description}
               </p>
             </motion.div>
